@@ -33,9 +33,11 @@ function toggleHamburgerMenu() {
             el.classList.add('is-hamburger-active');
         });
     } else {
-        headerLink.forEach((el) => {
-            el.classList.remove('is-hamburger-active');
-        });
+        headerLink.forEach(el => el.style.display = "none");
+        headerLink.forEach(el => el.classList.remove('is-hamburger-active'));
+        setTimeout(function() {
+            headerLink.forEach(el => el.style.display = "flex");
+        }, 100);
     }
 }
 
