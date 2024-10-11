@@ -14,7 +14,7 @@
     padding: 15px;
     padding-left: 20px;
     height: 100vh;
-    align-items: self-start;
+    align-items: flex-start;
 }
 
 .header-background {
@@ -35,7 +35,6 @@
     box-shadow: none;
 }
 
-
 .header-logo {
     height: 50px;
     cursor: pointer;
@@ -52,7 +51,7 @@
 }
 
 .header-title.is-hamburger-active {
-    transform: translate(-10px,6px);
+    transform: translate(-10px, 6px);
 }
 
 .header-separator {
@@ -97,7 +96,6 @@
 
 .header-link-container {
     display: flex;
-    
 }
 
 .header-link {
@@ -166,7 +164,7 @@
 
 @media screen and (max-width: 700px) {
     .header-separator, .header-links {
-       display: none;
+        display: none;
     }
 
     .header-link {
