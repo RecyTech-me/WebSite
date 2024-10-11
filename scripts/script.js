@@ -25,9 +25,18 @@ function toggleHamburgerMenu() {
     header.classList.toggle("is-hamburger-active");
     headerBackground.classList.toggle("is-hamburger-active");
     headerTitle.classList.toggle("is-hamburger-active");
-    headerLinks.classList.toggle("is-hamburger-active");
-    headerLink.forEach(el => el.classList.toggle('is-hamburger-active'));
     hamburgerMenu.classList.toggle("active");
+
+    if (header.classList.contains("is-hamburger-active")) {
+        headerLink.forEach(el => el.classList.add('is-hamburger-active'));
+    } else {
+        headerLink.forEach(el => el.style.display = "none");
+        headerLink.forEach(el => el.classList.remove('is-hamburger-active'));
+        
+        setTimeout(function() {
+            headerLink.forEach(el => el.style.display = "flex");
+        }, 100);
+    }
 }
 
 hamburgerMenu.addEventListener("click", toggleHamburgerMenu);
