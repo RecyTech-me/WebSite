@@ -30,7 +30,7 @@ hamburgerMenu.addEventListener("click", toggleHamburgerMenu);
 
 // Check screen width for hamburger menu autoclosing
 window.addEventListener("resize", () => {
-    if (screen.width > 650 && header.classList.contains("is-hamburger-active")) {
+    if (screen.width > 700 && header.classList.contains("is-hamburger-active")) {
         toggleHamburgerMenu();
     }
 });
