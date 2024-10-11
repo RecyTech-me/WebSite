@@ -81,7 +81,6 @@
 }
 
 .header-link {
-    background-color: red;
     display: flex;
     font-family: "Raleway-SemiBold";
     font-size: 20px;
@@ -102,12 +101,6 @@
 
 .header-link.is-hamburger-active {
     font-size: 28px;
-}
-
-.header-arrow {
-    display: none;
-    width: 10px;
-    transform: rotate(180deg);
 }
 
 .hamburger-menu {
