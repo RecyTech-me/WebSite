@@ -57,10 +57,10 @@ headerLink.forEach((link) => {
 });
 
 // Temp 
-body.classList.toggle("is-hamburger-active");
-header.classList.toggle("is-hamburger-active");
-headerTitle.classList.toggle("is-hamburger-active");
-headerBackground.classList.toggle("is-hamburger-active");
-hamburgerMenu.classList.toggle("active");
-headerLinks.classList.toggle("is-hamburger-active");
-headerLink.forEach(el => el.classList.toggle('is-hamburger-active'));
+// body.classList.toggle("is-hamburger-active");
+// header.classList.toggle("is-hamburger-active");
+// headerTitle.classList.toggle("is-hamburger-active");
+// headerBackground.classList.toggle("is-hamburger-active");
+// hamburgerMenu.classList.toggle("active");
+// headerLinks.classList.toggle("is-hamburger-active");
+// headerLink.forEach(el => el.classList.toggle('is-hamburger-active'));
