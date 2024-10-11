@@ -59,12 +59,14 @@
     height: 60%;
     width: 4px;
     background: var(--border-color);
+    z-index: 2;
 }
 
 .header-links {
     display: flex;
     gap: 20px;
     cursor: pointer;
+    z-index: 2;
 }
 
 .header-link {
