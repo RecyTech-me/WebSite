@@ -103,9 +103,15 @@ main {
 
 @media screen and (max-width: 990px) {
 
+    .product {
+        display: block;
+    }
+
     .blockProduct {
         flex-direction: column;
         gap: 2vh;
+        position: relative;
+        top: 20px;
     }
     
     .slogan {
