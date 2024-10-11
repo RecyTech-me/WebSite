@@ -18,57 +18,117 @@ main {
     height: calc(100vh - var(--header-height));
 }
 
-.section-slogan {
-    font-family: "Raleway-SemiBold";
-    color: var(--secondary-color);
-    font-size: 50px;
-}
-
-
-.section-buy {
-    border-radius: calc(var(--border-radius) + 37px);
+.blockProduct {
     display: flex;
-    gap: 10px;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    height: 544px;
-    width: 450px;
-    background-color: var(--secondary-color);
+    justify-content: center;
+    gap: 100px;
+    width: 100%;
 }
 
-.buy-image-title {
-    position: relative;
-}
-
-.buy-image {
-    border-radius: var(--border-radius);
-    width: 375px;
-}
-
-.buy-title {
-    position: absolute;
-    color: var(--text-color);
+.slogan {
     font-family: Raleway-SemiBold;
-    bottom: 10px;
-    left: 10px;
-    text-shadow: 1px 1px 0px #0000004f;
+    color: var(--secondary-color);
+    font-size: 55px;
+}
+
+.blockBuy {
+    background-color: var(--secondary-color);
+    width: 425px;
+    height: 535px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: calc(var(--border-radius) + 37px);
+    gap: 20px;
+}
+
+.blockBuyImage {
+    display: flex;
+    width: 82.5%;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    
+}
+
+.blocTxt {
+    width: 100%;
+    animation: changeImage 27s infinite;
+}
+
+.buyImage {
+
+    width: 351px;
 
 }
 
-.buy-button {
-    border-radius: 40px;
-    width: 375px;
-    height: 80px;
+@keyframes changeImage {
+    0%, 12.5% { transform: translateX(0%); }
+    25%, 37.5% { transform: translateX(-100%); }
+    50%, 62.5% { transform: translateX(-200%); }
+    75%, 87.5% { transform: translateX(-300%); }
+    100% { transform: translateX(0%); }    
+}
+
+.buyTxt {
+    color: var(--text-color);
+    text-shadow: 1px 1px 0px #0000004f;
+    font-family: Raleway-SemiBold;
+    font-size: 1.3em;
+    width: 82.5%;
+    position: absolute;
+    bottom: 0px;
+    margin: 15px;
+
+}
+
+.buyBtn {
     background-color: var(--text-color);
     font-family: Raleway-SemiBold;
     font-size: 30px;
+    border-radius: 40px;
     color: var(--secondary-color);
     cursor: pointer;
+    width: 82.5%;
+    text-align: center;
+    line-height: 80px;
+    height: 80px;
+    transition: 1.2s;
 }
 
-.buy-button:hover, .buy-button:focus{
-    border: 1px solid black;
+.buyBtn:hover {
+    scale: 0.9;
+}
+
+@media screen and (max-width: 990px) {
+
+    .blockProduct {
+        flex-direction: column;
+        gap: 2vh;
+    }
+    
+    .slogan {
+        font-size: 30px;
+        width: 90%;
+    }
+
+    .blockBuy {
+        width: 415px;
+        height: 525px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .main-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .blockBuy {
+        width: 100%;
+        background-color: transparent;
+    }
 }
 
 .contact {
