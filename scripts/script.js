@@ -16,13 +16,17 @@ const body = document.body;
 const header = document.getElementById("mainHeader");
 const headerBackground = document.getElementById("headerBackground");
 const headerTitle = document.getElementById("headerTitle");
+const headerLinks = document.getElementById("headerLinks")
+const headerLink = document.querySelectorAll(".header-link")
 const hamburgerMenu = document.getElementById("hamburgerMenu");
 
 function toggleHamburgerMenu() {
     body.classList.toggle("is-hamburger-active");
     header.classList.toggle("is-hamburger-active");
-    headerTitle.classList.toggle("is-hamburger-active");
     headerBackground.classList.toggle("is-hamburger-active");
+    headerTitle.classList.toggle("is-hamburger-active");
+    headerLinks.classList.toggle("is-hamburger-active");
+    headerLink.forEach(el => el.classList.toggle('is-hamburger-active'));
     hamburgerMenu.classList.toggle("active");
 }
 
@@ -34,3 +38,20 @@ window.addEventListener("resize", () => {
         toggleHamburgerMenu();
     }
 });
+
+headerLink.forEach((link) => {
+    link.addEventListener('click', () => {
+      if (header.classList.contains('is-hamburger-active')) {
+        toggleHamburgerMenu();
+      }
+    });
+});
+
+// Temp 
+body.classList.toggle("is-hamburger-active");
+header.classList.toggle("is-hamburger-active");
+headerTitle.classList.toggle("is-hamburger-active");
+headerBackground.classList.toggle("is-hamburger-active");
+hamburgerMenu.classList.toggle("active");
+headerLinks.classList.toggle("is-hamburger-active");
+headerLink.forEach(el => el.classList.toggle('is-hamburger-active'));
