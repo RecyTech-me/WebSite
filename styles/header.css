@@ -67,19 +67,6 @@
     gap: 20px;
     cursor: pointer;
     z-index: 2;
-    transition: opacity 0.5s ease;
-}
-
-.header-link:nth-child(2) {
-    transition-delay: 0.2s;
-}
-
-.header-link:nth-child(3) {
-    transition-delay: 0.4s;
-}
-
-.header-link:nth-child(4) {
-    transition-delay: 0.6s;
 }
 
 .header-links.is-hamburger-active {
@@ -91,7 +78,6 @@
     flex-direction: column;
     height: 80%;
     width: calc(100% - 47px);
-    opacity: 1;
 }
 
 .header-link {
@@ -99,12 +85,11 @@
     font-size: 20px;
     text-decoration: none;
     color: var(--text-color);
-    transition: opacity 0.2s;
+    opacity: 1; 
 }
 
 .header-link.is-hamburger-active {
     font-size: 28px;
-    opacity: 1;
 }
 
 .header-link:hover, .header-link:focus {
@@ -112,9 +97,8 @@
     outline: none;
 }
 
-.header-link-arrow {
-    transform: rotate(180deg);
-    display: none;
+.header-link.is-hamburger-active {
+    font-size: 28px;
 }
 
 .hamburger-menu {
@@ -159,15 +143,51 @@
 }
 
 @media screen and (max-width: 700px) {
-    .header-separator, .header-links {
+    .header-separator {
         display: none;
-    }
-
-    .header-link {
-        opacity: 0;
     }
 
     .hamburger-menu {
         display: flex;
     }
+
+    .header-links {
+        display: flex;
+        position: absolute;
+        top: calc(50% + 50px);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        flex-direction: column;
+        height: 80%;
+        width: calc(100% - 47px);
+        pointer-events: none; 
+    }
+
+    .header-links.is-hamburger-active {
+        pointer-events: auto; 
+    }
+
+    .header-link {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        transition-delay: 0s;
+    }
+
+    .header-link.is-hamburger-active {
+        opacity: 1;
+    }
+
+    .header-links.is-hamburger-active .header-link:nth-child(1) {
+        transition-delay: 0s;
+    }
+    .header-links.is-hamburger-active .header-link:nth-child(2) {
+        transition-delay: 0.1s;
+    }
+    .header-links.is-hamburger-active .header-link:nth-child(3) {
+        transition-delay: 0.2s;
+    }
+    .header-links.is-hamburger-active .header-link:nth-child(4) {
+        transition-delay: 0.3s;
+    }
 }
+
