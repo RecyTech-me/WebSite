@@ -27,7 +27,7 @@
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     background: rgba(255, 255, 255, 0.1);
-    transition: height 0.25s ease;
+    transition: height 0.25s ease-out;
 }
 
 .header-background.is-hamburger-active {
@@ -81,12 +81,15 @@
 }
 
 .header-link {
+    background-color: red;
+    display: flex;
     font-family: "Raleway-SemiBold";
     font-size: 20px;
     text-decoration: none;
     color: var(--text-color);
     opacity: 1; 
 }
+
 
 .header-link.is-hamburger-active {
     font-size: 28px;
@@ -99,6 +102,12 @@
 
 .header-link.is-hamburger-active {
     font-size: 28px;
+}
+
+.header-arrow {
+    display: none;
+    width: 10px;
+    transform: rotate(180deg);
 }
 
 .hamburger-menu {
