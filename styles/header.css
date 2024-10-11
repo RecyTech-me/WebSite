@@ -94,10 +94,6 @@
     opacity: 1;
 }
 
-.header-link-container {
-    display: flex;
-}
-
 .header-link {
     font-family: "Raleway-SemiBold";
     font-size: 20px;
