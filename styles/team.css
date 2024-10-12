@@ -4,8 +4,8 @@
     justify-content: center;
     align-items: center;
     gap: 75px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .member-card {
@@ -15,7 +15,7 @@
     align-items: center;
     flex-direction: column;
     height: 600px;
-    flex-basis: 400px; 
+    flex-basis: 375px; 
     flex-grow: 0; 
     flex-shrink: 0; 
     color: var(--primary-color);
@@ -23,7 +23,7 @@
 }
 
 .member-photo {
-    /* border: 4px solid var(--primary-color); */
+    border-bottom: 4px solid var(--primary-color);
     border-radius: var(--border-radius) var(--border-radius) 0px 0px;
     width: 100%;
     height: 50%;
@@ -33,11 +33,11 @@
 
 .name-role-container {
     border-radius: calc(var(--border-radius) - 15px);
-    top: 275.5px;
+    top: 276px;
     padding: 10px;
     position: absolute;
     left: 50%;
-    width: 90%;
+    width: 60%;
     transform: translateX(-50%);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
     text-align: center;
@@ -50,9 +50,10 @@
 }
 
 .member-description {
+    text-align: center;
     margin: 65px 30px 20px 30px;
-    font-size: 18px;
-    height: 210px;
+    font-size: 26px;
+    height: 140px;
     overflow: auto;
 }
 
