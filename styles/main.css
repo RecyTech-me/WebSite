@@ -212,7 +212,12 @@ main {
         padding-right: 0;
     }
 
+    .product-container {
+        gap: 0px;
+    }
+
     .slogan {
+        margin-bottom: -18px;
         font-size: 28px;
         width: calc(100% - 70px);
     }
