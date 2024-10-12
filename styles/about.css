@@ -39,10 +39,17 @@
 }
 
 .about-image {
-    width: 100%;
-    height: auto;
+    transform: translateY(30px);
+    height: calc(100vh - 240px);
     border-radius: var(--border-radius);
     box-shadow: 10px 10px 0px 0px var(--primary-color);
+}
+
+@media screen and (max-width: 1500px) { 
+    .about-image {
+        height: auto;
+        max-width: 90%;
+    }
 }
 
 @media screen and (max-width: 990px) {

@@ -1,11 +1,12 @@
 .team {
+    padding-top: 80px;
     overflow: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 75px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .member-card {
@@ -15,7 +16,7 @@
     align-items: center;
     flex-direction: column;
     height: 600px;
-    flex-basis: 400px; 
+    flex-basis: 375px; 
     flex-grow: 0; 
     flex-shrink: 0; 
     color: var(--primary-color);
@@ -23,7 +24,7 @@
 }
 
 .member-photo {
-    /* border: 4px solid var(--primary-color); */
+    border-bottom: 4px solid var(--primary-color);
     border-radius: var(--border-radius) var(--border-radius) 0px 0px;
     width: 100%;
     height: 50%;
@@ -33,11 +34,11 @@
 
 .name-role-container {
     border-radius: calc(var(--border-radius) - 15px);
-    top: 275.5px;
+    top: 276px;
     padding: 10px;
     position: absolute;
     left: 50%;
-    width: 90%;
+    width: 65%;
     transform: translateX(-50%);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
     text-align: center;
@@ -50,9 +51,10 @@
 }
 
 .member-description {
+    text-align: center;
     margin: 65px 30px 20px 30px;
-    font-size: 18px;
-    height: 210px;
+    font-size: 26px;
+    height: 140px;
     overflow: auto;
 }
 
@@ -84,16 +86,61 @@
 
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-height: 775px) {
+    .team {
+        gap: 30px;
+    }
+
     .member-card {
-        height: 515px;
+        transform: scale(0.9);
     }
-
-    .name-role-container {
-        top: 235.5px;
-    }
-
 }
+
+@media screen and (max-height: 750px) {
+
+    .team {
+        gap: 0px;
+    }
+
+    .member-card {
+        margin-left: -10px;
+        margin-right: -10px;
+        transform: scale(0.8);
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .member-card {
+        margin-left: -30px;
+        margin-right: -30px;
+        transform: scale(0.7);
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .member-card {
+        margin-left: -30px;
+        margin-right: -30px;
+        transform: scale(0.7);
+    }
+}
+
+@media screen and (max-width: 455px) {
+    .member-card {
+        flex-basis: calc(100vw - 100px);
+    }
+}
+
+@media screen and (max-width: 455px) {
+    .member-name {
+        font-size: 16px;
+    }
+    
+    .member-description {
+        font-size: 20px;
+    }
+}
+
 
 @media (pointer: coarse) {
     .member-button {
