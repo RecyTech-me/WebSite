@@ -18,7 +18,7 @@ main {
     height: calc(100vh - var(--header-height));
 }
 
-.blockProduct {
+.product-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,7 +32,7 @@ main {
     font-size: 55px;
 }
 
-.blockBuy {
+.container-buy {
     background-color: var(--secondary-color);
     width: 425px;
     height: 535px;
@@ -44,46 +44,36 @@ main {
     gap: 20px;
 }
 
-.blockBuyImage {
+.buy-images-container {
     display: flex;
     width: 82.5%;
     overflow: hidden;
     border-radius: var(--border-radius);
-    
+    position: relative;
 }
 
-.blocTxt {
+.buy-image-wrapper {
     width: 100%;
+    flex-shrink: 0;
     animation: changeImage 27s infinite;
 }
 
-.buyImage {
-
+.buy-image {
     width: 351px;
-
 }
 
-@keyframes changeImage {
-    0%, 12.5% { transform: translateX(0%); }
-    25%, 37.5% { transform: translateX(-100%); }
-    50%, 62.5% { transform: translateX(-200%); }
-    75%, 87.5% { transform: translateX(-300%); }
-    100% { transform: translateX(0%); }    
-}
-
-.buyTxt {
+.buy-text {
     color: var(--text-color);
     text-shadow: 1px 1px 0px #0000004f;
     font-family: Raleway-SemiBold;
     font-size: 1.3em;
     width: 82.5%;
     position: absolute;
-    bottom: 0px;
-    margin: 15px;
-
+    bottom: 15px;
+    left: 15px;
 }
 
-.buyBtn {
+.buy-button {
     background-color: var(--text-color);
     font-family: Raleway-SemiBold;
     font-size: 30px;
@@ -97,44 +87,8 @@ main {
     transition: 1.2s;
 }
 
-.buyBtn:hover {
-    scale: 0.9;
-}
-
-@media screen and (max-width: 990px) {
-
-    .product {
-        display: block;
-    }
-
-    .blockProduct {
-        flex-direction: column;
-        gap: 2vh;
-        position: relative;
-        top: 20px;
-    }
-    
-    .slogan {
-        font-size: 30px;
-        width: 90%;
-    }
-
-    .blockBuy {
-        width: 415px;
-        height: 525px;
-    }
-}
-
-@media screen and (max-width: 425px) {
-    .main-section {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .blockBuy {
-        width: 100%;
-        background-color: transparent;
-    }
+.buy-button:hover {
+    transform: scale(0.9);
 }
 
 .contact {
@@ -198,4 +152,47 @@ main {
     width: 100%;
     height: auto;
     border-radius: var(--border-radius);
+}
+
+@keyframes changeImage {
+    0%, 12.5% { transform: translateX(0%); }
+    25%, 37.5% { transform: translateX(-100%); }
+    50%, 62.5% { transform: translateX(-200%); }
+    75%, 87.5% { transform: translateX(-300%); }
+    100% { transform: translateX(0%); }    
+}
+
+@media screen and (max-width: 990px) {
+    .product {
+        display: block;
+    }
+
+    .product-container {
+        flex-direction: column;
+        gap: 2vh;
+        position: relative;
+        top: 20px;
+    }
+    
+    .slogan {
+        font-size: 30px;
+        width: 90%;
+    }
+
+    .container-buy {
+        width: 415px;
+        height: 525px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .main-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .container-buy {
+        width: 100%;
+        background-color: transparent;
+    }
 }
