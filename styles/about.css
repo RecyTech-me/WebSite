@@ -1,5 +1,6 @@
 .about {
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: space-between;
     height: calc(100vh - var(--header-height));
@@ -7,19 +8,6 @@
     padding: 50px;
     position: relative;
     height: 100vh;
-}
-
-.about-icon-wrapper {
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    transform: scale(2);
-    overflow: hidden;
-}
-
-.about-icon {
-    width: 80px;
-    height: auto;
 }
 
 .about-text-content {
@@ -56,4 +44,22 @@
     width: 100%;
     height: auto;
     border-radius: var(--border-radius);
+    box-shadow: 10px 10px 0px 0px var(--primary-color);
+}
+
+@media screen and (max-width: 990px) {
+    .about-image-content {
+        display: none;
+    }
+
+    .about-text-content {
+        flex: auto;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .about-text {
+        font-size: 15px;
+    }
 }
