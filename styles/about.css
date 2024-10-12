@@ -60,8 +60,8 @@
 
 @media screen and (max-width: 500px) {
     .about {
-        padding-top: 120px;
         display: flex;
+        justify-content: center;
         align-items: center;
     }
     
@@ -70,16 +70,35 @@
     }
 
     .about-text {
-        font-size: 15px;
+        font-size: 17px;
         margin-bottom: 0px;
     }
 
     .about-text-content {
+        margin-top: 80px;
         border-radius: var(--border-radius);
         border: 5px solid var(--primary-color);
-        padding: 10px;
+        padding: 15px;
         display: flex;
         flex-direction: column;
         gap: 10px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .about-text {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .about-text {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .about-text {
+        font-size: 13.5px;
     }
 }
