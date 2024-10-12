@@ -45,7 +45,6 @@
     margin-right: -10px;
     transform: translateX(-10px);
     color: var(--text-color);
-    font-family: "Raleway-SemiBold";
     user-select: none;
     -webkit-user-select: none;
 }
@@ -82,7 +81,6 @@
 
 .header-link {
     display: flex;
-    font-family: "Raleway-SemiBold";
     font-size: 20px;
     text-decoration: none;
     color: var(--text-color);

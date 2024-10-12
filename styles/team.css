@@ -1,0 +1,59 @@
+.team {
+    padding-top: 80px;
+}
+
+.member-card {
+    border-radius: var(--border-radius);
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 600px;
+    width: 25vw;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+.member-photo {
+    /* border: 4px solid var(--primary-color); */
+    border-radius: var(--border-radius) var(--border-radius) 0px 0px;
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+}
+
+.name-role-container {
+    border-radius: calc(var(--border-radius) - 15px);
+    top: 207.5px;
+    padding: 10px;
+    position: absolute;
+    left: 50%;
+    width: 220px;transform: translateX(-50%);
+    text-align: center;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+}
+
+.member-description {
+    margin: 50px 20px 20px 20px;
+    font-size: 20px;
+    height: 210px;
+}
+
+.member-button {
+    width: calc(100% - 40px);
+    border-radius: 40px;
+    height: 60px;
+    font-size: 30px;
+    text-align: center;
+    color: var(--secondary-color);
+    background-color: var(--text-color);
+    cursor: pointer;
+    transition: 1.2s;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.member-button:hover {
+    transform: scale(0.95);
+}

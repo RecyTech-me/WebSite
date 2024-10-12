@@ -1,15 +1,3 @@
-main {
-    margin-top: var(--header-height);
-    overflow: hidden; /*temp*/
-}
-
-.main-section {
-    width: 100%;
-    height: 100vh;
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
 .product {
     display: flex;
     gap: 150px;
@@ -27,7 +15,6 @@ main {
 }
 
 .slogan {
-    font-family: Raleway-SemiBold;
     color: var(--secondary-color);
     font-size: 55px;
 }
@@ -66,7 +53,6 @@ main {
 .buy-text {
     color: var(--text-color);
     text-shadow: 1px 1px 0px #0000004f;
-    font-family: Raleway-SemiBold;
     font-size: 1.3em;
     width: 82.5%;
     position: absolute;
@@ -76,7 +62,6 @@ main {
 
 .buy-button {
     background-color: var(--text-color);
-    font-family: Raleway-SemiBold;
     font-size: 30px;
     border-radius: 40px;
     color: var(--secondary-color);
