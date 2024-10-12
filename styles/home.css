@@ -157,12 +157,6 @@
     }
 }
 
-@media screen and (max-height: 850px) {
-    body {
-        background-color: red;
-    }
-}
-
 @media (pointer: coarse) {
     .buy-button:hover {
         transform: scale(1);
