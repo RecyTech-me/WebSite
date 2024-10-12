@@ -56,3 +56,40 @@ headerLink.forEach((link) => {
         }
     });
 });
+
+// Formulaire contact
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const contenu = document.getElementById('message').value;
+
+    const sendButton = document.getElementById('sendButton');
+    sendButton.disabled = true;
+    sendButton.textContent = 'Envoi en cours...';
+
+    fetch('https://douxxu.lain.ch/tests/mail/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `email=${encodeURIComponent(email)}&contenu=${encodeURIComponent(contenu)}`
+    })
+    .then(response => response.text())
+    .then(data => {
+        if (data === "true") {
+            sendButton.textContent = 'Envoyé';
+        } else {
+            alert('Une erreur est survenue lors de l\'envoi du message.');
+            sendButton.disabled = false;
+            sendButton.textContent = 'Réessayer';
+        }
+    })
+    .catch(error => {
+        console.error('Erreur:', error);
+        alert('Une erreur est survenue. Veuillez réessayer plus tard.');
+        sendButton.disabled = false;
+        sendButton.textContent = 'Réessayer';
+    });
+});

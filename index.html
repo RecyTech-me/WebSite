@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./styles/home.css">
     <link rel="stylesheet" href="./styles/about.css">
     <link rel="stylesheet" href="./styles/team.css">
+    <link rel="stylesheet" href="./styles/contact.css">
+
 
     <script src="./scripts/script.js" defer></script>
     <title>RecyTech</title>
@@ -90,7 +92,19 @@
                 <button class="member-button">Visiter</button>
             </div>
         </section>
-        <section id="contact" class="main-section contact"></section>
+        <section id="contact" class="main-section contact">
+            <h2 class="contact-title">Contactez-nous</h2>
+            <form id="contactForm" class="contact-form">
+                <label for="email" class="contact-label">Votre email :</label>
+                <input type="email" id="email" name="email" class="contact-input" placeholder="Entrez votre email" required>
+                
+                <label for="message" class="contact-label">Votre message :</label>
+                <textarea id="message" name="message" class="contact-textarea" placeholder="Entrez votre message" required></textarea>
+                
+                <button id="sendButton" type="submit" class="contact-button">Envoyer</button>
+            </form>
+        </section>
+        
     </main>
 </body>
 </html>
