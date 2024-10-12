@@ -86,6 +86,45 @@
 
 }
 
+@media screen and (max-height: 775px) {
+    .team {
+        gap: 30px;
+    }
+
+    .member-card {
+        transform: scale(0.9);
+    }
+}
+
+@media screen and (max-height: 750px) {
+
+    .team {
+        gap: 0px;
+    }
+
+    .member-card {
+        margin-left: -10px;
+        margin-right: -10px;
+        transform: scale(0.8);
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .member-card {
+        margin-left: -30px;
+        margin-right: -30px;
+        transform: scale(0.7);
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .member-card {
+        margin-left: -30px;
+        margin-right: -30px;
+        transform: scale(0.7);
+    }
+}
+
 @media screen and (max-width: 500px) {
     .member-card {
         height: 515px;
