@@ -1,5 +1,7 @@
 .team {
     padding-top: 80px;
+    display: flex;
+    gap: 10px;
 }
 
 .member-card {
@@ -20,6 +22,7 @@
     width: 100%;
     height: 40%;
     object-fit: cover;
+    background: #000000;
 }
 
 .name-role-container {
@@ -35,9 +38,25 @@
     background-color: var(--primary-color);
 }
 
+.sp1 {
+    width: 240px;
+}
+
+.sp2 {
+    top: 200px;
+}
+
+.member-name {
+    font-size: 20px;
+}
+
+.member-role {
+    font-size: 14px;
+}
+
 .member-description {
     margin: 50px 30px 20px 30px;
-    font-size: 20px;
+    font-size: 18px;
     height: 210px;
 }
 
@@ -57,4 +76,10 @@
 
 .member-button:hover {
     transform: scale(0.95);
+}
+
+@media (pointer: coarse) {
+    .member-button {
+        transform: scale(1);
+    }
 }
