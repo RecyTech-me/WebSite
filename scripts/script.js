@@ -69,7 +69,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     sendButton.disabled = true;
     sendButton.textContent = 'Envoi en cours...';
 
-    fetch('https://douxxu.lain.ch/tests/mail/', {
+    fetch('api/utils/send_contact.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
