@@ -125,16 +125,22 @@
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 455px) {
     .member-card {
-        height: 515px;
+        flex-basis: calc(100vw - 100px);
     }
-
-    .name-role-container {
-        top: 235.5px;
-    }
-
 }
+
+@media screen and (max-width: 455px) {
+    .member-name {
+        font-size: 16px;
+    }
+    
+    .member-description {
+        font-size: 20px;
+    }
+}
+
 
 @media (pointer: coarse) {
     .member-button {
