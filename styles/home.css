@@ -83,6 +83,31 @@
     background-color: var(--secondary-color); 
 }
 
+/* Animation fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation slide-in */
+.slide-in {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.slide-in.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
 @keyframes changeImage {
     0%, 12.5% { transform: translateX(0%); }
     25%, 37.5% { transform: translateX(-100%); }

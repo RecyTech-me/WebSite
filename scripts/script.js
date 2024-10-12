@@ -93,3 +93,42 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         sendButton.textContent = 'Réessayer';
     });
 });
+
+
+// load
+window.onload = function() {
+    const overlay = document.getElementById('overlay');
+    overlay.style.transition = 'opacity 0.5s ease';
+    overlay.style.opacity = '0';
+    
+    setTimeout(() => {
+        overlay.style.display = 'none';
+        document.body.style.overflow = 'auto';  
+    }, 500);
+
+    console.log('%c[Loader] Page chargée sans erreurs!', 'color: green; font-weight: bold;')
+};
+
+// Crash
+
+window.onerror = function(message, source, lineno, colno, error) {
+    const overlay = document.getElementById('overlay');
+    overlay.style.display = 'flex';
+    overlay.style.opacity = '1';
+
+    setTimeout(function() {
+        location.reload();
+    }, 3000);   
+    const messagelog = `
+Stats pour les nerds:
+Message: ${message}
+Erreur: ${error}
+Source: ${source}
+Ligne: ${lineno}
+Colonne: ${colno}
+    `;
+
+    console.log('%c[Loader] Une erreur est survenue ! Reload de la page.', 'color: red; font-weight: bold;');
+    console.log(messagelog);
+    return true;
+};

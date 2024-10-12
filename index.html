@@ -13,12 +13,20 @@
     <link rel="stylesheet" href="./styles/about.css">
     <link rel="stylesheet" href="./styles/team.css">
     <link rel="stylesheet" href="./styles/contact.css">
+    <link rel="stylesheet" href="./styles/loading.css">
 
 
     <script src="./scripts/script.js" defer></script>
     <title>RecyTech</title>
 </head>
 <body>
+
+    <div id="overlay">
+        <img src="https://cdn.douxx.xyz/files/RecyTech.png" alt="Loading" />
+        <div id="loading-text">RecyTech Shop</div>
+        <div id="loading-percentage">0%</div>
+    </div>
+    
     <header id="mainHeader" class="main-header">
         <div id="headerBackground" class="header-background"></div>
         <img class="header-logo" src="./images/logo.png" alt="RecyTech logo" onclick="window.location.reload()">
