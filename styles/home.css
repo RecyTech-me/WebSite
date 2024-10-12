@@ -98,66 +98,6 @@ main {
     background-color: var(--secondary-color); 
 }
 
-.about {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: calc(100vh - var(--header-height));
-    background-color: var(--secondary-color);
-    padding: 50px;
-    position: relative;
-    height: 100vh;
-}
-
-.about-icon-wrapper {
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    transform: scale(2);
-    overflow: hidden;
-}
-
-.about-icon {
-    width: 80px;
-    height: auto;
-}
-
-.about-text-content {
-    flex: 1;
-    max-width: 50%;
-    text-align: left;
-    padding-right: 20px;
-}
-
-.about-title {
-    font-family: "Raleway-SemiBold";
-    color: var(--primary-color);
-    font-size: 40px;
-    margin-bottom: 20px;
-}
-
-.about-text {
-    font-family: "Raleway-SemiBold";
-    color: var(--primary-color);
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.about-image-content {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 50%;
-}
-
-.about-image {
-    width: 100%;
-    height: auto;
-    border-radius: var(--border-radius);
-}
-
 @keyframes changeImage {
     0%, 12.5% { transform: translateX(0%); }
     25%, 37.5% { transform: translateX(-100%); }
