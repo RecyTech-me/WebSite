@@ -88,6 +88,11 @@
     .member-card {
         height: 515px;
     }
+
+    .name-role-container {
+        top: 235.5px;
+    }
+
 }
 
 @media (pointer: coarse) {
