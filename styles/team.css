@@ -9,7 +9,7 @@
     align-items: center;
     flex-direction: column;
     height: 600px;
-    width: 25vw;
+    width: 350px;
     color: var(--primary-color);
     background-color: var(--secondary-color);
 }
@@ -29,19 +29,20 @@
     position: absolute;
     left: 50%;
     width: 220px;transform: translateX(-50%);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
     text-align: center;
     color: var(--secondary-color);
     background-color: var(--primary-color);
 }
 
 .member-description {
-    margin: 50px 20px 20px 20px;
+    margin: 50px 30px 20px 30px;
     font-size: 20px;
     height: 210px;
 }
 
 .member-button {
-    width: calc(100% - 40px);
+    width: calc(100% - 60px);
     border-radius: 40px;
     height: 60px;
     font-size: 30px;
