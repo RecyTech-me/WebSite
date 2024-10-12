@@ -47,6 +47,7 @@ main {
 .buy-images-container {
     display: flex;
     width: 82.5%;
+    height: 360px;  
     overflow: hidden;
     border-radius: var(--border-radius);
     position: relative;
@@ -59,7 +60,7 @@ main {
 }
 
 .buy-image {
-    width: 351px;
+    width: 360px;
 }
 
 .buy-text {
@@ -210,7 +211,7 @@ main {
     .main-section {
         padding-left: 0;
         padding-right: 0;
-    }
+    }   
 
     .product-container {
         gap: 0px;
