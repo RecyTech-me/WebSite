@@ -59,7 +59,27 @@
 }
 
 @media screen and (max-width: 500px) {
+    .about {
+        padding-top: 120px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .about-title {
+        margin-bottom: -5px;
+    }
+
     .about-text {
         font-size: 15px;
+        margin-bottom: 0px;
+    }
+
+    .about-text-content {
+        border-radius: var(--border-radius);
+        border: 5px solid var(--primary-color);
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 }
