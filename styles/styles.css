@@ -32,3 +32,7 @@ body.is-hamburger-active {
     overflow: hidden;
 }
 
+img {
+    user-select: none;
+    -webkit-user-select: none;
+}

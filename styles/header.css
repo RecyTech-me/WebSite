@@ -87,6 +87,8 @@
     text-decoration: none;
     color: var(--text-color);
     opacity: 1; 
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 
