@@ -88,7 +88,7 @@ main {
 }
 
 .buy-button:hover {
-    transform: scale(0.9);
+    transform: scale(0.95);
 }
 
 .contact {
@@ -182,24 +182,27 @@ main {
 
 @media screen and (max-width: 990px) {
     .product {
-        display: block;
+        display: flex;
     }
 
     .product-container {
+
         flex-direction: column;
         gap: 2vh;
         position: relative;
-        top: 20px;
     }
     
     .slogan {
         font-size: 30px;
-        width: 90%;
     }
 
     .container-buy {
         width: 415px;
         height: 525px;
+    }
+
+    .about-text, .about-title {
+        font-size:5px;
     }
 }
 
@@ -209,8 +212,19 @@ main {
         padding-right: 0;
     }
 
+    .slogan {
+        font-size: 28px;
+        width: calc(100% - 70px);
+    }
+
     .container-buy {
         width: 100%;
         background-color: transparent;
+    }
+}
+
+@media (pointer: coarse) {
+    .buy-button:hover {
+        transform: scale(1);
     }
 }
