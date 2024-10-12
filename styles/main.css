@@ -162,6 +162,24 @@ main {
     100% { transform: translateX(0%); }    
 }
 
+@media screen and (max-width: 1200px) {
+    .slogan {
+        font-size: 46.5px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .slogan {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .slogan {
+        font-size: 36px;
+    }
+}
+
 @media screen and (max-width: 990px) {
     .product {
         display: block;
