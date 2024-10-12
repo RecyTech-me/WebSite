@@ -1,4 +1,5 @@
 .team {
+    padding-top: 80px;
     overflow: auto;
     display: flex;
     justify-content: center;
