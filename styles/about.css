@@ -99,6 +99,12 @@
 
 @media screen and (max-width: 350px) {
     .about-text {
-        font-size: 13.5px;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .about-text {
+        font-size: 12px;
     }
 }
