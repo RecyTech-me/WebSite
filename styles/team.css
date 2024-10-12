@@ -1,7 +1,11 @@
 .team {
-    padding-top: 80px;
+    overflow: auto;
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .member-card {
@@ -11,7 +15,9 @@
     align-items: center;
     flex-direction: column;
     height: 600px;
-    width: 350px;
+    flex-basis: 400px; 
+    flex-grow: 0; 
+    flex-shrink: 0; 
     color: var(--primary-color);
     background-color: var(--secondary-color);
 }
@@ -20,50 +26,42 @@
     /* border: 4px solid var(--primary-color); */
     border-radius: var(--border-radius) var(--border-radius) 0px 0px;
     width: 100%;
-    height: 40%;
+    height: 50%;
     object-fit: cover;
     background: #000000;
 }
 
 .name-role-container {
     border-radius: calc(var(--border-radius) - 15px);
-    top: 207.5px;
+    top: 275.5px;
     padding: 10px;
     position: absolute;
     left: 50%;
-    width: 220px;transform: translateX(-50%);
+    width: 90%;
+    transform: translateX(-50%);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
     text-align: center;
     color: var(--secondary-color);
     background-color: var(--primary-color);
 }
 
-.sp1 {
-    width: 240px;
-}
-
-.sp2 {
-    top: 200px;
-}
-
 .member-name {
     font-size: 20px;
 }
 
-.member-role {
-    font-size: 14px;
-}
-
 .member-description {
-    margin: 50px 30px 20px 30px;
+    margin: 65px 30px 20px 30px;
     font-size: 18px;
     height: 210px;
+    overflow: auto;
 }
 
 .member-button {
     width: calc(100% - 60px);
     border-radius: 40px;
     height: 60px;
+    position: relative;
+    bottom: 15px;
     font-size: 30px;
     text-align: center;
     color: var(--secondary-color);
@@ -76,6 +74,20 @@
 
 .member-button:hover {
     transform: scale(0.95);
+}
+
+@media screen and (max-width: 1900px) {
+
+    .team {
+        justify-content: left;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .member-card {
+        height: 515px;
+    }
 }
 
 @media (pointer: coarse) {
