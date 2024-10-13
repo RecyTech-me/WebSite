@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on§: ubuntu-latest
     
     steps:
     - name: Checkout code
@@ -19,6 +19,6 @@ jobs:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: "/recytech/"
+        server-dir: "/"
         local-dir: ./
         dry-run: false
