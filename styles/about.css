@@ -127,6 +127,6 @@
 @media screen and (max-height: 900px) {
     .about-text {
         line-height: 1.3em;
-        font-size: 1.8vh;
+        font-size: 1.8dvh;
     }
 }
