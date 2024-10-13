@@ -160,6 +160,31 @@
     }
 }
 
+@media screen and (max-height: 950px) {
+    .buy-images-container {
+        margin-top: -40px;
+    }
+    
+    .buy-image-wrapper, .buy-images-container {
+        height: 320px;
+    }
+
+    .buy-image{
+        object-fit: cover;
+        height: 320px;
+    }
+}
+
+@media screen and (max-height : 900px) {
+    .buy-images-container {
+        margin-top: -60px;
+    }
+
+    .buy-images-container, .buy-image-wrapper, .buy-image{
+        height: 300px;
+    }
+}
+
 @media screen and (max-width: 425px) {
     .main-section {
         padding-left: 0;
