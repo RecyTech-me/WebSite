@@ -1,3 +1,14 @@
+:root {
+    --header-height: 60px; /* Exemple de valeur, ajustez selon votre projet */
+    --secondary-color: #f0f0f0;
+    --text-color: #333333;
+    --border-radius: 10px;
+    --transition-duration: 0.5s;
+    --font-size-slogan-large: 55px;
+    --font-size-slogan-medium: 40px;
+    --font-size-slogan-small: 28px;
+}
+
 .product {
     display: flex;
     gap: 150px;
@@ -16,7 +27,8 @@
 
 .slogan {
     color: var(--secondary-color);
-    font-size: 55px;
+    font-size: var(--font-size-slogan-large);
+    transition: font-size var(--transition-duration) ease-out;
 }
 
 .container-buy {
@@ -41,18 +53,19 @@
 }
 
 .buy-image-wrapper {
-    width: 100%;
-    flex-shrink: 0;
+    flex: 0 0 100%;
     animation: changeImage 27s infinite;
 }
 
 .buy-image {
-    width: 360px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .buy-text {
     color: var(--text-color);
-    text-shadow: 1px 1px 0px #0000004f;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
     font-size: 1.3em;
     width: 82.5%;
     position: absolute;
@@ -62,17 +75,17 @@
 
 .buy-button {
     background-color: var(--text-color);
-    font-size: 30px;
-    border-radius: 40px;
     color: var(--secondary-color);
+    font-size: 30px;
+    border: none;
+    border-radius: 40px;
     cursor: pointer;
     width: 82.5%;
-    text-align: center;
-    line-height: 80px;
     height: 80px;
-    transition: 1.2s;
+    line-height: 80px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
     user-select: none;
-    -webkit-user-select: none;
 }
 
 .buy-button:hover {
@@ -83,31 +96,7 @@
     background-color: var(--secondary-color); 
 }
 
-/* Animation fade-in */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Animation slide-in */
-.slide-in {
-    opacity: 0;
-    transform: translateX(-20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-
-.slide-in.visible {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-
+/* Animations */
 @keyframes changeImage {
     0%, 12.5% { transform: translateX(0%); }
     25%, 37.5% { transform: translateX(-100%); }
@@ -116,6 +105,32 @@
     100% { transform: translateX(0%); }    
 }
 
+/* Transition Animations */
+.fade-in,
+.slide-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-in.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in {
+    transform: translateY(20px);
+}
+
+.slide-in {
+    transform: translateX(-20px);
+}
+
+/* Responsive Typography for .slogan */
 @media screen and (max-width: 1200px) {
     .slogan {
         font-size: 46.5px;
@@ -135,31 +150,41 @@
 }
 
 @media screen and (max-width: 990px) {
-    .product {
-        display: flex;
+    .slogan {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .slogan {
+        font-size: var(--font-size-slogan-small);
+        margin-bottom: -18px;
+        width: calc(100% - 70px);
     }
 
     .product-container {
-
         flex-direction: column;
         gap: 2vh;
         position: relative;
     }
-    
-    .slogan {
-        font-size: 30px;
-    }
 
     .container-buy {
-        width: 415px;
+        width: 100%;
         height: 525px;
+        background-color: transparent;
     }
 
-    .about-text, .about-title {
-        font-size:5px;
+    .about-text,
+    .about-title {
+        font-size: 5px;
+    }
+
+    .main-section {
+        padding: 0;
     }
 }
 
+/* Responsive Heights */
 @media screen and (max-height: 950px) {
     .container-buy {
         height: calc(40vh + 34px + 139px);
@@ -167,55 +192,25 @@
     
     .buy-images-container {
         margin-top: -0.5vh;
-    }
-    
-    .buy-image-wrapper, .buy-images-container {
-        height: 40vh;
-    }
-
-    .buy-image{
-        object-fit: cover;
         height: 40vh;
     }
 }
 
-@media screen and (max-width: 425px) {
-    .main-section {
-        padding-left: 0;
-        padding-right: 0;
-    }   
-
-    .product-container {
-        gap: 0px;
+@media screen and (max-height: 875px) {
+    .buy-images-container {
+        margin-top: -4vh;
     }
-
-    .slogan {
-        margin-bottom: -18px;
-        font-size: 28px;
-        width: calc(100% - 70px);
-    }
-
-    .container-buy {
-        width: 100%;
-        background-color: transparent;
-    }
-
-    @media screen and (max-height: 875px) {
-        .buy-images-container {
-            margin-top: -4vh;
-        }
-    }
-    
-    @media screen and (max-height: 825px) {
-        .buy-images-container {
-            margin-top: -2vh;
-        }
-    }
-
 }
 
+@media screen and (max-height: 825px) {
+    .buy-images-container {
+        margin-top: -2vh;
+    }
+}
+
+/* Remove hover effects on touch devices */
 @media (pointer: coarse) {
     .buy-button:hover {
-        transform: scale(1);
+        transform: none;
     }
 }
