@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecyTech</title>
     <link rel="icon" href="images/logo.png" type="image/png">
-    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    
+
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/home.css">
@@ -16,60 +15,60 @@
     <link rel="stylesheet" href="./styles/loading.css">
 
     <script src="./scripts/script.js" defer></script>
-    <title>RecyTech</title>
 </head>
 <body>
-
     <div id="overlay">
-        <img src="https://cdn.douxx.xyz/files/RecyTech.png" alt="Loading" />
+        <img src="https://cdn.douxx.xyz/files/RecyTech.png" alt="RecyTech Logo" />
         <div id="loading-text">RecyTech Shop</div>
     </div>
-    
+
     <header id="mainHeader" class="main-header">
         <div id="headerBackground" class="header-background"></div>
         <img class="header-logo" src="./images/logo.png" alt="RecyTech logo" onclick="window.location.reload()">
         <h1 id="headerTitle" class="header-title">RecyTech</h1>
         <div class="header-separator"></div>
-        <div id="headerLinks" class="header-links">
-            <p id="headerLinkProduct" class="header-link" onclick="smoothScroll('headerLinkProduct', 'product')">Accueil</p>
-            <p id="headerLinkAbout" class="header-link" onclick="smoothScroll('headerLinkAbout', 'about')">À propos</p>
-            <p id="headerLinkTeam" class="header-link" onclick="smoothScroll('headerLinkTeam', 'team')">Équipe</p>
-            <p id="headerLinkContact" class="header-link" onclick="smoothScroll('headerLinkContact', 'contact')">Contact</p>
-        </div>
-        
+        <nav id="headerLinks" class="header-links">
+            <a id="headerLinkProduct" class="header-link" href="#product">Accueil</a>
+            <a id="headerLinkAbout" class="header-link" href="#about">À propos</a>
+            <a id="headerLinkTeam" class="header-link" href="#team">Équipe</a>
+            <a id="headerLinkContact" class="header-link" href="#contact">Contact</a>
+        </nav>
         <div class="hamburger-menu" id="hamburgerMenu">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
     </header>
+
     <main>
         <section id="product" class="main-section product">
             <div class="product-container">
-                <div class="slogan">Transformer les vieux<br> PC en nouvelles opportunités.</div>
+                <h2 class="slogan">Transformer les vieux<br> PC en nouvelles opportunités.</h2>
                 <div class="container-buy">
                     <div class="buy-images-container">
+                        <!-- S'assurer que les attributs alt sont descriptifs -->
                         <div class="buy-image-wrapper">
-                            <img class="buy-image" src="./images/template2.jpg" alt="template2">
+                            <img class="buy-image" src="./images/template2.jpg" alt="Produit 1">
                             <div class="buy-text">Produit 1</div>
                         </div>
                         <div class="buy-image-wrapper">
-                            <img class="buy-image" src="./images/template.jpg" alt="template">
+                            <img class="buy-image" src="./images/template.jpg" alt="Produit 2">
                             <div class="buy-text">Produit 2</div>
                         </div>
                         <div class="buy-image-wrapper">
-                            <img class="buy-image" src="./images/template2.jpg" alt="template2">
+                            <img class="buy-image" src="./images/template2.jpg" alt="Produit 3">
                             <div class="buy-text">Produit 3</div>
                         </div>
                         <div class="buy-image-wrapper">
-                            <img class="buy-image" src="./images/template.jpg" alt="template">
+                            <img class="buy-image" src="./images/template.jpg" alt="Produit 4">
                             <div class="buy-text">Produit 4</div>
                         </div>
                     </div>
-                    <div onclick="alert('la boutique n\' est pas encore disponible.')" class="buy-button">Visiter la boutique</div>
+                    <button onclick="alert('La boutique n\'est pas encore disponible.')" class="buy-button">Visiter la boutique</button>
                 </div>
             </div>
         </section>
+
         <section id="about" class="main-section about">
             <div class="about-text-content">
                 <h2 class="about-title">À propos</h2>
@@ -78,66 +77,65 @@
                     Nous proposons également des PC complets, réassemblés et remis à neuf, avec un choix de distributions Linux adaptées à différents besoins.
                 </p>
                 <p class="about-text">
-                    L'objectif est de rendre l'informatique accessible tout en contribuant à la réduction des déchets électroniques. 
+                    L'objectif est de rendre l'informatique accessible tout en contribuant à la réduction des déchets électroniques.
                     Chaque machine est soigneusement vérifiée et remise en état, offrant une solution économique et durable pour les étudiants, les petites entreprises, et toute personne à la recherche d'un PC fiable à petit prix.
                 </p>
             </div>
-            
             <div class="about-image-content">
                 <img class="about-image" src="./images/template.jpg" alt="Reconditionnement d'ordinateurs">
             </div>
-        </section>   
+        </section>
+
         <section id="team" class="main-section team">
             <div class="member-card first">
                 <div class="member-top">
-                    <img src="./images/members/aster.png" alt="Achille Roussel logo" class="member-photo">
-                    <h1 class="member-name">Achille Roussel</h1>
+                    <img src="./images/members/aster.png" alt="Photo de Achille Roussel" class="member-photo">
+                    <h3 class="member-name">Achille Roussel</h3>
                 </div>
                 <p class="member-description">"Ce n'est qu'en perdant la liberté qu'on en saisit la pleine valeur"</p>
                 <button class="member-button" onclick="window.location.href='https://rmbi.ch/aster'">Visiter</button>
             </div>
             <div class="member-card">
                 <div class="member-top">
-                    <img src="./images/members/isaia.jpeg" alt="Isaia Placi logo" class="member-photo">
-                    <h1 class="member-name">Isaia Placi</h1>
+                    <img src="./images/members/isaia.jpeg" alt="Photo de Isaia Placi" class="member-photo">
+                    <h3 class="member-name">Isaia Placi</h3>
                 </div>
                 <p class="member-description">"Le code n'est pas juste une langue, c'est une manière de penser"</p>
                 <button class="member-button" onclick="window.location.href='https://placi.dyn.mk'">Visiter</button>
             </div>
             <div class="member-card">
                 <div class="member-top">
-                    <img src="./images/members/jdm.png" alt="Julien de Montmollin logo" class="member-photo">
-                    <h1 class="member-name">Julien de Montmollin</h1>
+                    <img src="./images/members/jdm.png" alt="Photo de Julien de Montmollin" class="member-photo">
+                    <h3 class="member-name">Julien de Montmollin</h3>
                 </div>
                 <p class="member-description">"Le meilleur moyen de prédire le futur, c'est de le créer."</p>
                 <button class="member-button" onclick="window.location.href='https://rmbi.ch/jdm'">Visiter</button>
             </div>
             <div class="member-card">
                 <div class="member-top">
-                    <img src="./images/members/vital.png" alt="Vital Vuillaume logo" class="member-photo">
-                    <h1 class="member-name">Vital Vuillaume</h1>
+                    <img src="./images/members/vital.png" alt="Photo de Vital Vuillaume" class="member-photo">
+                    <h3 class="member-name">Vital Vuillaume</h3>
                 </div>
                 <p class="member-description">"Le numérique est ma toile, le code est ma couleur."</p>
                 <button class="member-button" onclick="window.location.href='https://github.com/Vital-Vuillaume'">Visiter</button>
             </div>
         </section>
+
         <section id="contact" class="main-section contact">
             <h2 class="contact-title">Contactez-nous</h2>
             <form id="contactForm" class="contact-form">
                 <label for="email" class="contact-label">Votre email :</label>
                 <input type="email" id="email" name="email" class="contact-input" placeholder="Entrez votre email" required>
-                
+
                 <label for="message" class="contact-label">Votre message :</label>
                 <textarea id="message" name="message" class="contact-textarea" placeholder="Entrez votre message" required></textarea>
-                
+
                 <button id="sendButton" type="submit" class="contact-button">Envoyer</button>
             </form>
             <footer class="footer">
                 <div class="footer-container">
                     <a href="https://github.com/RecyLife/Website" class="footer-link" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="footer-icon">
-                            <path fill="currentColor" d="M8 .198A8 8 0 0 0 0 8c0 3.536 2.292 6.528 5.47 7.594.4.073.548-.173.548-.384 0-.19-.007-.825-.012-1.5-2.1.455-2.544-1.01-2.544-1.01-.343-.87-.837-1.1-.837-1.1-.684-.465.052-.456.052-.456.758.053 1.153.778 1.153.778.673 1.151 1.762.819 2.192.626.068-.486.263-.819.48-1.007-1.666-.191-3.415-.833-3.415-3.707 0-.82.293-1.487.776-2.017-.078-.191-.337-.965.073-2.008 0 0 .63-.202 2.063.77a7.198 7.198 0 0 1 1.884-.253 7.197 7.197 0 0 1 1.884.253c1.432-.972 2.063-.77 2.063-.77.41 1.043.151 1.817.073 2.008.484.53.776 1.197.776 2.017 0 2.889-1.756 3.516-3.427 3.705.27.233.51.692.51 1.392 0 1.006-.009 1.817-.012 2.063 0 .212.145.459.551.383A8 8 0 0 0 16 8a8 8 0 0 0-8-7.802z"/>
-                        </svg>
+                        <img class="footer-icon" src="images/github.svg" alt="github logo">
                         GitHub
                     </a>
                     <p class="footer-copyright">&#169; 2024 RecyTech</p>
@@ -145,10 +143,6 @@
                 </div>
             </footer>
         </section>
-        
     </main>
-    
-    
-    
 </body>
 </html>
