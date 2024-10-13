@@ -160,6 +160,25 @@
     }
 }
 
+@media screen and (max-height: 950px) {
+    .container-buy {
+        height: calc(40vh + 34px + 139px);
+    }
+    
+    .buy-images-container {
+        margin-top: -0.5vh;
+    }
+    
+    .buy-image-wrapper, .buy-images-container {
+        height: 40vh;
+    }
+
+    .buy-image{
+        object-fit: cover;
+        height: 40vh;
+    }
+}
+
 @media screen and (max-width: 425px) {
     .main-section {
         padding-left: 0;
@@ -180,6 +199,19 @@
         width: 100%;
         background-color: transparent;
     }
+
+    @media screen and (max-height: 875px) {
+        .buy-images-container {
+            margin-top: -4vh;
+        }
+    }
+    
+    @media screen and (max-height: 825px) {
+        .buy-images-container {
+            margin-top: -2vh;
+        }
+    }
+
 }
 
 @media (pointer: coarse) {

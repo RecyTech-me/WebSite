@@ -128,6 +128,11 @@
 @media screen and (max-width: 455px) {
     .member-card {
         flex-basis: calc(100vw - 100px);
+        margin-left: -10vw;
+    }
+
+    .member-card.first{
+        margin-left: 0px;
     }
 }
 

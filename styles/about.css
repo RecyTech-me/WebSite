@@ -63,6 +63,16 @@
     }
 }
 
+@media screen and (max-height: 950px) {
+    .about {
+        padding: 30px;
+    }
+    
+    .about-text {
+            line-height: 1.5em;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .about {
         display: flex;
@@ -111,5 +121,12 @@
 @media screen and (max-width: 325px) {
     .about-text {
         font-size: 12px;
+    }
+}
+
+@media screen and (max-height: 900px) {
+    .about-text {
+        line-height: 1.3em;
+        font-size: 1.9vh;
     }
 }
