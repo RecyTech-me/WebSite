@@ -161,6 +161,10 @@
 }
 
 @media screen and (max-height: 950px) {
+    body {
+        background-color: red;
+    }
+    
     .buy-images-container {
         margin-top: -40px;
     }
