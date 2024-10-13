@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Envoi de l'email
     if ($email && !empty($contenu)) {
-        $to = "recytech@proton.me"; //changer si besoin
+        $to = "contact@recytech.me"; //changer si besoin
         $subject = "Contact from $email";
         $message = "
         <html>
