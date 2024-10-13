@@ -27,6 +27,7 @@
 
 body {
 	background-color: var(--primary-color);
+    background-color: red;
 }
 
 main {
