@@ -1,0 +1,38 @@
+.footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+
+.footer-icon {
+    width: 20px; 
+    height: 20px;
+    margin-right: 8px; 
+}
+
+
+.footer-copyright,
+.footer-contact {
+    margin: 5px 0;
+}
