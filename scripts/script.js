@@ -28,7 +28,7 @@ function toggleHamburgerMenu() {
     });
 
     hamburgerMenu.classList.toggle("active");
-    body.style.overflow = isActive ? "hidden" : "";
+    body.style.overflow = isActive ? "hidden" : "visible";
 
     headerLink.forEach(el => {
         el.classList.toggle('is-hamburger-active');
