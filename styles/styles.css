@@ -27,12 +27,10 @@
 
 body {
 	background-color: var(--primary-color);
-    background-color: red;
 }
 
 main {
     margin-top: var(--header-height);
-    overflow: hidden; /*temp*/
 }
 
 img {
