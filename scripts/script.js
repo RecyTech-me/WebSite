@@ -1,13 +1,10 @@
 // Navigation - Smooth Scroll
-function smoothScroll(targetId) {
+function smoothScroll(linkId, targetId) {
     const targetElement = document.getElementById(targetId);
-    if (!targetElement) return;
-
-    let elementPosition = targetElement.offsetTop;
+    let elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
     if (targetId === "product") {
         elementPosition -= 80;
     }
-
     window.scrollTo({
         top: elementPosition,
         behavior: "smooth"
