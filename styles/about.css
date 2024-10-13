@@ -63,6 +63,18 @@
     }
 }
 
+@media screen and (max-height: 950px) {
+        .about-text {
+            line-height: 1.5em;
+        }
+}
+
+@media screen and (max-height: 900px) {
+    .about-text {
+        line-height: 1.35em;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .about {
         display: flex;
