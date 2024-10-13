@@ -61,10 +61,6 @@
 }
 
 @media screen and (max-height: 950px) {
-    .about {
-        padding: 30px;
-    }
-
     .about-text {
         line-height: 1.5;
     }
@@ -72,6 +68,7 @@
 
 @media screen and (max-width: 500px) {
     .about {
+        padding: 30px;
         align-items: center;
         justify-content: center;
     }

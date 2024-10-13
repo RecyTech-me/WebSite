@@ -1,45 +1,46 @@
 .team {
-    padding-top: 80px;
-    overflow: auto;
+    padding: 80px 50px 0 50px;
     display: flex;
+    gap: 75px;
     justify-content: center;
     align-items: center;
-    gap: 75px;
-    padding-left: 50px;
-    padding-right: 50px;
+    overflow: auto;
 }
 
 .member-card {
     border-radius: var(--border-radius);
-    position: relative;
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     height: 600px;
-    flex-basis: 375px; 
-    flex-grow: 0; 
-    flex-shrink: 0; 
+    flex: 0 0 375px;
     color: var(--primary-color);
     background-color: var(--secondary-color);
 }
 
-.member-photo {
+.member-top {
     border-bottom: 4px solid var(--primary-color);
-    border-radius: var(--border-radius) var(--border-radius) 0px 0px;
+    position: relative;
+    height: 55%;
     width: 100%;
-    height: 50%;
+}
+
+.member-photo {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    background: #000000;
+    background-color: #000;
 }
 
 .name-role-container {
-    border-radius: calc(var(--border-radius) - 15px);
-    top: 276px;
     padding: 10px;
+    border-radius: calc(var(--border-radius) - 15px);
     position: absolute;
+    bottom: -22.5px;
     left: 50%;
-    width: 65%;
     transform: translateX(-50%);
+    width: 70%;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
     text-align: center;
     color: var(--secondary-color);
@@ -48,20 +49,22 @@
 
 .member-name {
     font-size: 20px;
+    color: inherit;
 }
 
 .member-description {
-    text-align: center;
-    margin: 65px 30px 20px 30px;
+    margin: 55px 30px 20px;
     font-size: 26px;
-    height: 140px;
+    text-align: center;
+    height: 120px;
     overflow: auto;
+    color: inherit;
 }
 
 .member-button {
     width: calc(100% - 60px);
-    border-radius: 40px;
     height: 60px;
+    border-radius: 40px;
     position: relative;
     bottom: 15px;
     font-size: 30px;
@@ -69,7 +72,7 @@
     color: var(--secondary-color);
     background-color: var(--text-color);
     cursor: pointer;
-    transition: 1.2s;
+    transition: transform 1.2s;
     user-select: none;
     -webkit-user-select: none;
 }
@@ -79,14 +82,23 @@
 }
 
 @media screen and (max-width: 1900px) {
-
     .team {
-        justify-content: left;
+        justify-content: flex-start;
     }
-
 }
 
-@media screen and (max-height: 775px) {
+@media screen and (max-height: 850px) {
+    .member-card {
+        height: 65vh;
+    }
+
+    .member-description {
+        margin-top: 5vh;
+        height: 10.6vh;
+    }
+}
+
+@media screen and (max-height: 750px) {
     .team {
         gap: 30px;
     }
@@ -96,47 +108,33 @@
     }
 }
 
-@media screen and (max-height: 750px) {
-
-    .team {
-        gap: 0px;
-    }
-
-    .member-card {
-        margin-left: -10px;
-        margin-right: -10px;
-        transform: scale(0.8);
-    }
-}
-
 @media screen and (max-height: 700px) {
-    .member-card {
-        margin-left: -30px;
-        margin-right: -30px;
-        transform: scale(0.7);
+    .team {
+        gap: 20px;
     }
 }
 
-@media screen and (max-height: 600px) {
+@media screen and (max-width: 500px) {
+    .team {
+        padding: 80px 30px 0 30px;
+    }
+
     .member-card {
-        margin-left: -30px;
-        margin-right: -30px;
-        transform: scale(0.7);
+        flex-basis: calc(100vw - 75px);
+        margin-left: -10vw;
     }
 }
 
-@media screen and (max-width: 455px) {
+@media screen and (max-width: 375px) {
     .member-card {
-        flex-basis: calc(100vw - 100px);
+        flex-basis: calc(100vw - 60px);
         margin-left: -10vw;
     }
 
-    .member-card.first{
-        margin-left: 0px;
+    .member-card.first {
+        margin-left: 0;
     }
-}
 
-@media screen and (max-width: 455px) {
     .member-name {
         font-size: 16px;
     }
@@ -145,7 +143,6 @@
         font-size: 20px;
     }
 }
-
 
 @media (pointer: coarse) {
     .member-button {
