@@ -1,11 +1,15 @@
-body {
-    margin: 0;
-    overflow: hidden;
-}
-
 :root {
     --primary-color: #E8DFCA;
     --secondary-color: #4F6F52;
+}
+
+* {
+    font-family: "Raleway-SemiBold";
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
 }
 
 #overlay {
