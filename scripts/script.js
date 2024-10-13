@@ -31,8 +31,10 @@ function toggleHamburgerMenu() {
     if (headerLinks.classList.contains("is-hamburger-active")) {
         headerLink.forEach((el, index) => {
             el.classList.add('is-hamburger-active');
+            body.style.overflow = "hidden"
         });
     } else {
+        body.style.overflow = "scroll"
         headerLink.forEach(el => el.style.display = "none");
         headerLink.forEach(el => el.classList.remove('is-hamburger-active'));
         setTimeout(function() {

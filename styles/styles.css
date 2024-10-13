@@ -29,10 +29,6 @@ body {
 	background-color: var(--primary-color);
 }
 
-body.is-hamburger-active {
-    overflow: hidden;
-}
-
 main {
     margin-top: var(--header-height);
     overflow: hidden; /*temp*/
