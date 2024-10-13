@@ -43,4 +43,7 @@ img {
     height: 100vh;
     padding-left: 50px;
     padding-right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

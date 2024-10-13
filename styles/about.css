@@ -37,16 +37,15 @@
 }
 
 .about-image {
-    transform: translateY(30px);
-    height: calc(100vh - 240px);
     border-radius: var(--border-radius);
     box-shadow: 10px 10px 0px 0px var(--primary-color);
+    height: auto;
+    max-width: 50%;
 }
 
-@media screen and (max-width: 1500px) { 
+@media screen and (max-height: 1200px) {
     .about-image {
-        height: auto;
-        max-width: 90%;
+        max-height: 50vh;
     }
 }
 
