@@ -87,10 +87,18 @@
 }
 
 @media screen and (max-width: 1760px) {
+    .team {
+        padding-right: 0px;
+    }
+
     .team-cards {
         padding: 0px;
         justify-content: left;
         overflow-x: auto;
+    }
+
+    .member-card:last-child {
+        margin-right: 50px;
     }
 }
 
@@ -139,7 +147,7 @@
 
 @media screen and (max-width: 500px) {
     .team {
-        padding: 80px 30px 0px 30px;
+        padding-left: 30px;
     }
 
     .team-cards {
@@ -148,6 +156,10 @@
 
     .member-card {
         min-width: 78vw;
+    }
+
+    .member-card:last-child {
+        margin-right: 30px;
     }
 }
 
