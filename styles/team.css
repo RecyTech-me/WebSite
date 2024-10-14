@@ -1,14 +1,13 @@
 .team {
-    padding: 0px;
+    padding: 80px 50px 0px 50px;
 }
 
 .team-cards {
-
-    display: flex;
     padding: 2% 25px 2% 25px;
-    gap: 300px;
+    gap: 20px;
+    display: flex;
     justify-content: center;
-
+    align-items: center;
 }
 
 .member-card {
@@ -18,7 +17,8 @@
     flex-direction: column;
     align-items: center;
     height: 600px;
-    flex: 0 0 375px;
+    min-width: 400px;
+    max-width: 400px;
     color: var(--primary-color);
     background-color: var(--secondary-color);
 }
@@ -62,11 +62,11 @@
 }
 
 .member-button {
-    width: calc(100% - 60px);
-    height: 60px;
     border-radius: 40px;
     position: absolute;
     bottom: 30px;
+    width: calc(100% - 60px);
+    height: 60px;
     font-size: 30px;
     text-align: center;
     color: var(--secondary-color);
@@ -80,71 +80,84 @@
     transform: scale(0.95);
 }
 
-@media screen and (max-width: 2500px) {
+@media screen and (min-width: 2000px) {
     .team-cards {
-        gap: 110px;
+        gap: 30px;
     }
 }
 
-@media screen and (max-width: 1870px) {
+@media screen and (max-width: 1760px) {
     .team-cards {
+        padding: 0px;
         justify-content: left;
-        overflow: auto;
+        overflow-x: auto;
+    }
+}
+
+@media screen and (max-height: 950px) {
+    .member-card {
+        height: 63vh;
+    }
+
+    .member-description {
+        margin-top: 4.8vh;
+        font-size: 23px;
     }
 }
 
 @media screen and (max-height: 850px) {
-
-    .member-card {
-        height: 62.5vh;
-    }
-
     .member-description {
-        margin-top: 5.5vh; 
+        margin-top: 5.4vh;
+        font-size: 20px;
+    }
+    
+    .member-button {
+        font-size: 25px;
     }
 }
 
-@media screen and (max-height: 750px) {
-
-    .member-card {
-        transform: scale(0.9);
+@media screen and (max-height: 780px) {
+    .member-description {
+        margin-top: 4.8vh;
+    }
+    
+    .member-button {
+        height: 50px;
     }
 }
 
-@media screen and (max-height: 700px) {
-    .team-cards {
-        gap: 50px;
+@media screen and (max-height: 650px) {
+    .member-top {
+        height: 50%;
+    }
+    
+    .member-description {
+        margin-top: 6vh;
+        font-size: 18px;
     }
 }
 
 @media screen and (max-width: 500px) {
-
-    .member-card {
-        flex-basis: calc(100vw - 75px);
-        margin-left: -10vw;
+    .team {
+        padding: 80px 30px 0px 30px;
     }
 
-    .member-card.first {
-        margin-left: 0px;
+    .team-cards {
+        gap: 3vw;
+    }
+
+    .member-card {
+        min-width: 78vw;
     }
 }
 
-@media screen and (max-width: 450px) {
-    .member-description {
-        font-size: 22px;
-    }
-}
-
-@media screen and (max-width: 375px) {
-    .member-card {
-        flex-basis: calc(100vw - 60px);
-    }
-
-    .member-name {
-        font-size: 16px;
+@media screen and (max-width: 362px) {
+    .member-top {
+        height: 50%;
     }
 
     .member-description {
+        margin-top: 4.6vh;
         font-size: 20px;
     }
 }
