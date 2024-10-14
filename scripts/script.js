@@ -11,8 +11,7 @@ function smoothScroll(linkId, targetId) {
     });
 }
 
-
-// Hamburger Menu
+// Hamburger menu
 const body = document.body;
 const header = document.getElementById("mainHeader");
 const headerBackground = document.getElementById("headerBackground");
@@ -22,19 +21,26 @@ const headerLink = document.querySelectorAll(".header-link");
 const hamburgerMenu = document.getElementById("hamburgerMenu");
 
 function toggleHamburgerMenu() {
-    const isActive = header.classList.toggle("is-hamburger-active");
-
-    [body, headerBackground, headerTitle, headerLinks].forEach(el => {
-        el.classList.toggle("is-hamburger-active");
-    });
-
+    body.classList.toggle("is-hamburger-active");
+    header.classList.toggle("is-hamburger-active");
+    headerBackground.classList.toggle("is-hamburger-active");
+    headerTitle.classList.toggle("is-hamburger-active");
+    headerLinks.classList.toggle("is-hamburger-active");
     hamburgerMenu.classList.toggle("active");
-    body.style.overflow = isActive ? "hidden" : "visible";
 
-    headerLink.forEach(el => {
-        el.classList.toggle('is-hamburger-active');
-        el.style.display = isActive ? "flex" : "none";
-    });
+    if (headerLinks.classList.contains("is-hamburger-active")) {
+        headerLink.forEach((el, index) => {
+            el.classList.add('is-hamburger-active');
+            body.style.overflow = "hidden"
+        });
+    } else {
+        body.style.overflow = "scroll"
+        headerLink.forEach(el => el.style.display = "none");
+        headerLink.forEach(el => el.classList.remove('is-hamburger-active'));
+        setTimeout(function() {
+            headerLink.forEach(el => el.style.display = "flex");
+        }, 100);
+    }
 }
 
 hamburgerMenu.addEventListener("click", toggleHamburgerMenu);
@@ -45,7 +51,7 @@ window.addEventListener("resize", () => {
     }
 });
 
-headerLink.forEach(link => {
+headerLink.forEach((link) => {
     link.addEventListener('click', () => {
         if (header.classList.contains('is-hamburger-active')) {
             toggleHamburgerMenu();
