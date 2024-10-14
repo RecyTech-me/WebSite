@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Raleway-SemiBold;
+    src: url(../fonts/Raleway-SemiBold.ttf)
+}
+
 :root {
     --primary-color: #E8DFCA;
     --secondary-color: #4F6F52;
