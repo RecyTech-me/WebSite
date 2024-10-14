@@ -3,9 +3,9 @@
     background-color: var(--secondary-color); 
     padding: 40px 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -14,7 +14,6 @@
     font-size: 36px;
     margin-bottom: 20px;
     text-align: center;
-    font-family: 'Raleway-SemiBold';
 }
 
 .contact-form {
@@ -25,30 +24,18 @@
     gap: 20px;
 }
 
-.contact-input {
+.contact-input,
+.contact-textarea {
     padding: 15px;
-    border: 2px solid #000;
     border-radius: var(--border-radius);
-    font-family: 'Raleway-SemiBold'; 
     font-size: 16px;
+    border: 1px solid var(--border-color); /* Ajout de la bordure pour la transition */
     transition: border 0.3s ease;
-    resize: none;
 }
 
 .contact-textarea {
-    padding: 15px;
-    border: 2px solid #000;
-    border-radius: var(--border-radius);
-    font-family: 'Raleway-SemiBold'; 
-    font-size: 16px;
-    transition: border 0.3s ease;
+    height: 80px;
     resize: none;
-}
-
-.contact-label {
-    color: var(--primary-color); 
-    font-family: 'Raleway-SemiBold';
-    font-size: 18px; 
 }
 
 .contact-input:focus,
@@ -57,7 +44,14 @@
     outline: none;
 }
 
+.contact-label {
+    margin-bottom: -10px;
+    color: var(--primary-color); 
+    font-size: 18px; 
+}
+
 .contact-button {
+    margin-top: -10px;
     background-color: var(--secondary-color);
     color: var(--text-color);
     padding: 15px;
@@ -65,12 +59,11 @@
     border-radius: var(--border-radius);
     font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease; 
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease; 
 }
 
 .contact-button:hover {
     background-color: var(--primary-color);
-    color: var(--text-color);
     transform: translateY(-2px);
 }
 
@@ -78,7 +71,7 @@
     background-color: #cccccc;
     cursor: not-allowed;
 }
- 
+
 .footer {
     padding: 10px;
     position: absolute;
@@ -110,19 +103,18 @@
     height: 20px;
 }
 
-
 .footer-copyright,
 .footer-contact {
     margin: 5px 0;
 }
-
 
 @media screen and (max-width: 600px) {
     .contact-title {
         font-size: 28px;
     }
 
-    .contact-input {
+    .contact-input,
+    .contact-textarea {
         font-size: 14px;
     }
 
