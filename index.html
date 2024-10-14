@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
 
-
     <!--Meta opengraph, twittercard and some other things-->
     <meta name="keywords" content="pc, informatique, technologie, réparation, vente, shop, eshop, recytech, ecologie"/>
     <meta name="description" content="Transformer les vieux PC en nouvelles opportunités. Revente de matériel informatique en bon état à prix réduit."/>
@@ -28,9 +27,7 @@
     <meta name="og:url" content="https://recytech.ch"/>
     <meta name="og:image" content="https://cdn.douxx.xyz/files/RecyTech.png"/>
     <meta name="og:site_name" content="RecyTech"/>
-    <meta name="og:description" content="Transformer les vieux
-    PC en nouvelles opportunités."/>
-
+    <meta name="og:description" content="Transformer les vieux PC en nouvelles opportunités."/>
 
     <meta name="og:locality" content="Neuchâtel"/>
     <meta name="og:region" content="NE"/>
@@ -65,7 +62,7 @@
 </head>
 <body>
     <div id="overlay">
-        <img src="https://cdn.douxx.xyz/files/RecyTech.png" alt="RecyTech Logo" />
+        <img src="https://cdn.douxx.xyz/files/RecyTech.png" alt="RecyTech Logo"/>
         <div id="loading-text">RecyTech Shop</div>
     </div>
 
@@ -74,12 +71,13 @@
         <img class="header-logo" src="./images/logo.png" alt="RecyTech logo" onclick="window.location.reload()">
         <h1 id="headerTitle" class="header-title">RecyTech</h1>
         <div class="header-separator"></div>
-        <nav id="headerLinks" class="header-links">
-            <a id="headerLinkProduct" class="header-link" href="#product">Accueil</a>
-            <a id="headerLinkAbout" class="header-link" href="#about">À propos</a>
-            <a id="headerLinkTeam" class="header-link" href="#team">Équipe</a>
-            <a id="headerLinkContact" class="header-link" href="#contact">Contact</a>
-        </nav>
+        <div id="headerLinks" class="header-links">
+            <p id="headerLinkProduct" class="header-link" onclick="smoothScroll('headerLinkProduct', 'product')">Accueil</p>
+            <p id="headerLinkAbout" class="header-link" onclick="smoothScroll('headerLinkAbout', 'about')">À propos</p>
+            <p id="headerLinkTeam" class="header-link" onclick="smoothScroll('headerLinkTeam', 'team')">Équipe</p>
+            <p id="headerLinkContact" class="header-link" onclick="smoothScroll('headerLinkContact', 'contact')">Contact</p>
+        </div>
+        
         <div class="hamburger-menu" id="hamburgerMenu">
             <div class="bar"></div>
             <div class="bar"></div>

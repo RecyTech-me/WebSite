@@ -11,6 +11,7 @@ function smoothScroll(linkId, targetId) {
     });
 }
 
+
 // Hamburger Menu
 const body = document.body;
 const header = document.getElementById("mainHeader");
