@@ -1,5 +1,5 @@
 .team {
-    padding: 80px 50px 0px 50px;
+    padding: var(--main-section-padding)
 }
 
 .team-cards {

@@ -1,3 +1,14 @@
 .goals {
+    padding: var(--main-section-padding);
     background-color: var(--secondary-color);
+}
+
+.goals-title {
+    color: var(--primary-color);
+}
+
+.goals-card {
+    height: 100px;
+    width: 200px;
+    background-color: var(--primary-color);
 }
