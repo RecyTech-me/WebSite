@@ -6,6 +6,7 @@
     height: 100vh;
     padding: 50px;
     background-color: var(--secondary-color);
+    background-color: red;
 }
 
 .about-text-content {
