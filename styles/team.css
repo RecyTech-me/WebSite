@@ -71,13 +71,7 @@
     text-align: center;
     color: var(--secondary-color);
     background-color: var(--text-color);
-    cursor: pointer;
-    transition: transform 1.2s;
     user-select: none;
-}
-
-.member-button:hover {
-    transform: scale(0.95);
 }
 
 @media screen and (min-width: 2000px) {

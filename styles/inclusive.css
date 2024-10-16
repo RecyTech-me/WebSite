@@ -1,0 +1,15 @@
+.inclusive {
+    overflow: hidden;
+}
+
+.inclusive::before {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    top: -60vh;
+    width: 110vw;
+    height: 120vh;
+    background-image: url(../images/inclusive.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

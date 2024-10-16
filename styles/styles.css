@@ -38,6 +38,15 @@ img {
     -webkit-user-select: none;
 }
 
+button {
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(0.98);
+}
+
 .main-section {
     position: relative;
     display: flex;
@@ -61,4 +70,10 @@ img {
   
 ::-webkit-scrollbar-thumb:hover {
     background-color: #555;
+}
+
+@media (pointer: coarse) {
+    button:hover {
+        transform: scale(1);
+    }
 }

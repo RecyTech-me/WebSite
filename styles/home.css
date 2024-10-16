@@ -67,25 +67,18 @@
     font-size: 30px;
     border-radius: 40px;
     color: var(--secondary-color);
-    cursor: pointer;
     width: 82.5%;
     text-align: center;
     line-height: 80px;
     height: 80px;
-    transition: 1.2s;
     user-select: none;
     -webkit-user-select: none;
-}
-
-.buy-button:hover {
-    transform: scale(0.95);
 }
 
 .contact {
     background-color: var(--secondary-color); 
 }
 
-/* Animation fade-in */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -97,7 +90,6 @@
     transform: translateY(0);
 }
 
-/* Animation slide-in */
 .slide-in {
     opacity: 0;
     transform: translateX(-20px);
@@ -234,11 +226,5 @@
 @media screen and (max-width: 345px) {
     .slogan {
         font-size: 23px;
-    }
-}
-
-@media (pointer: coarse) {
-    .buy-button:hover {
-        transform: scale(1);
     }
 }

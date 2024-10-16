@@ -1,14 +1,76 @@
 .goals {
     padding: var(--main-section-padding);
+    gap: 20px;
+    flex-direction: column;
     background-color: var(--secondary-color);
 }
 
 .goals-title {
+ 
+    font-size: 80px;
     color: var(--primary-color);
 }
 
-.goals-card {
-    height: 100px;
-    width: 200px;
+.goals-cards {
+    border-radius: calc(var(--border-radius) + 50px);
+    padding: 50px;
+    display: flex;
+    gap: 40px;
     background-color: var(--primary-color);
+}
+
+.goals-card {
+    border-radius: var(--border-radius);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 350px;
+    height: 250px;
+    background-color: var(--primary-color);
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.goals-card:nth-child(1) {
+    background-image: url(../images/recycling.jpg);
+}
+
+.goals-card:nth-child(2) {
+    background-image: url(../images/inclusive.jpg);
+}
+
+.goals-card:nth-child(3) {
+    background-image: url(../images/freedom.jpg);
+}
+
+.card-container {
+    border-top: 1px solid rgba(255, 255, 255, 0.212);
+    border-radius: 0px 0px var(--border-radius) var(--border-radius);
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    backdrop-filter: blur(5px);
+}
+
+.card-title {
+    font-size: 20px;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.card-button {
+    border-radius: var(--border-radius);
+    width: 45%;
+    height: 45px;
+    font-size: 16px;
+    background-color: var(--text-color);
 }
