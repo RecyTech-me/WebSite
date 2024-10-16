@@ -1,0 +1,15 @@
+.free {
+    overflow: hidden;
+}
+
+.image-title-container {
+    border-radius: 50%;
+    position: absolute;
+    top: -35vh;
+    width: 105vw;
+    height: 100vh;
+    background-image: url(../images/freedom.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: red;
+}
