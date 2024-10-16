@@ -75,14 +75,20 @@
 
 .section-title {
     margin-bottom: 20px;
+    display: none;
     font-size: 50px;
-    animation: appear 0.8s;
 }
 
 .section-text {
+    display: none;
     font-size: 20px;
     line-height: 28px;
-    animation: appear 0.8s;
+}
+
+.section-title.active,
+.section-text.active {
+    display: block;
+    animation: appear 0.8s forwards;
 }
 
 .recycling,
@@ -101,13 +107,19 @@
     border-radius: 100%;
     content: "";
     position: absolute;
-    left: -40vw;
+    left: -47.5vw;
     width: 80vw;
     height: 130vh;
     background-image: url(../images/recycling.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    animation: slide-left 0.8s ease-out;
+    opacity: 0;
+    transition: left 0.8s ease-out, opacity 0.8s;
+}
+
+.recycling.active::before {
+    left: -40vw;
+    opacity: 1;
 }
 
 .inclusive {
@@ -120,13 +132,19 @@
     border-radius: 100%;
     content: "";
     position: absolute;
-    right: -40vw;
+    right: -47.5vw;
     width: 80vw;
     height: 130vh;
     background-image: url(../images/inclusive.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    animation: slide-right 0.8s ease-out;
+    opacity: 0;
+    transition: right 0.8s ease-out, opacity 0.8s;
+}
+
+.inclusive.active::before {
+    right: -40vw;
+    opacity: 1;
 }
 
 .inclusive .section-title,
@@ -153,29 +171,11 @@
 /* Animations */
 @keyframes appear {
     0% {
-        transform: translateY(-5px);
+        transform: translateY(20px);
         opacity: 0;
     }
     100% {
         transform: translateY(0);
         opacity: 1;
-    }
-}
-
-@keyframes slide-left {
-    0% {
-        left: -47.5vw;
-    }
-    100% {
-        left: -40vw;
-    }
-}
-
-@keyframes slide-right {
-    0% {
-        right: -47.5vw;
-    }
-    100% {
-        right: -40vw;
     }
 }
