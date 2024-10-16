@@ -29,7 +29,7 @@
     padding: 15px;
     border-radius: var(--border-radius);
     font-size: 16px;
-    border: 1px solid var(--border-color); /* Ajout de la bordure pour la transition */
+    border: 1px solid var(--border-color);
     transition: border 0.3s ease;
 }
 

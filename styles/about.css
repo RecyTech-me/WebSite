@@ -4,28 +4,28 @@
     align-items: center;
     justify-content: space-between;
     height: 100vh;
-    padding: 50px;
+    padding: 3.125rem;
     background-color: var(--secondary-color);
 }
 
 .about-text-content {
     flex: 1;
     max-width: 50%;
-    padding-right: 20px;
+    padding-right: 1.25rem;
     text-align: left;
 }
 
 .about-title {
     color: var(--primary-color);
-    font-size: 40px;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
 }
 
 .about-text {
     color: var(--primary-color);
-    font-size: 18px;
+    font-size: clamp(0.75rem, 1.125rem + 1vw, 1.125rem);
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .about-image-content {
@@ -38,15 +38,10 @@
 
 .about-image {
     border-radius: var(--border-radius);
-    box-shadow: 10px 10px 0px 0px var(--primary-color);
+    box-shadow: 10px 10px 0 0 var(--primary-color);
     height: auto;
     max-width: 50%;
-}
-
-@media screen and (max-height: 1200px) {
-    .about-image {
-        max-height: 50vh;
-    }
+    max-height: 50vh;
 }
 
 @media screen and (max-width: 990px) {
@@ -59,60 +54,35 @@
     }
 }
 
-@media screen and (max-height: 950px) {
-    .about-text {
-        line-height: 1.5;
-    }
-}
-
 @media screen and (max-width: 500px) {
     .about {
-        padding: 30px;
+        padding: 1.875rem;
         align-items: center;
         justify-content: center;
     }
 
     .about-title {
-        margin-bottom: -5px;
+        margin-bottom: -0.3125rem;
     }
 
     .about-text-content {
-        margin-top: 80px;
-        padding: 15px;
-        border: 5px solid var(--primary-color);
+        margin-top: 5rem;
+        padding: 0.9375rem;
+        border: 0.3125rem solid var(--primary-color);
         border-radius: var(--border-radius);
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 0.625rem;
     }
-
+    
     .about-text {
-        font-size: 17px;
         margin-bottom: 0;
     }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-height: 950px) {
     .about-text {
-        font-size: 16px;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .about-text {
-        font-size: 15px;
-    }
-}
-
-@media screen and (max-width: 350px) {
-    .about-text {
-        font-size: 13px;
-    }
-}
-
-@media screen and (max-width: 325px) {
-    .about-text {
-        font-size: 12px;
+        line-height: 1.5;
     }
 }
 
