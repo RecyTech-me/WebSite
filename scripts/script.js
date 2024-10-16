@@ -2,7 +2,7 @@
 function smoothScroll(linkId, targetId) {
     const targetElement = document.getElementById(targetId);
     let elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-    if (targetId === "product") {
+    if (targetId === "home") {
         elementPosition -= 80;
     }
     window.scrollTo({
@@ -46,7 +46,7 @@ function toggleHamburgerMenu() {
 hamburgerMenu.addEventListener("click", toggleHamburgerMenu);
 
 window.addEventListener("resize", () => {
-    if (window.innerWidth > 700 && header.classList.contains("is-hamburger-active")) {
+    if (window.innerWidth > 800 && header.classList.contains("is-hamburger-active")) {
         toggleHamburgerMenu();
     }
 });
