@@ -6,7 +6,6 @@
 }
 
 .goals-title {
- 
     font-size: 80px;
     color: var(--primary-color);
 }
@@ -29,7 +28,6 @@
     width: 350px;
     height: 250px;
     background-color: var(--primary-color);
-    object-fit: cover;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -48,7 +46,7 @@
 
 .card-container {
     border-top: 1px solid rgba(255, 255, 255, 0.212);
-    border-radius: 0px 0px var(--border-radius) var(--border-radius);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
     padding: 10px;
     position: absolute;
     bottom: 0;
@@ -75,10 +73,28 @@
     background-color: var(--text-color);
 }
 
+.section-title {
+    margin-bottom: 20px;
+    font-size: 50px;
+    animation: appear 0.8s;
+}
+
+.section-text {
+    font-size: 20px;
+    line-height: 28px;
+    animation: appear 0.8s;
+}
+
+.recycling,
+.inclusive,
+.freedom {
+    overflow: hidden;
+    position: relative;
+}
+
 .recycling {
     padding-left: 45vw;
     padding-right: 5vw;
-    overflow: hidden;
 }
 
 .recycling::before {
@@ -86,7 +102,7 @@
     content: "";
     position: absolute;
     left: -40vw;
-    width: 80Vw;
+    width: 80vw;
     height: 130vh;
     background-image: url(../images/recycling.jpg);
     background-repeat: no-repeat;
@@ -94,46 +110,9 @@
     animation: slide-left 0.8s ease-out;
 }
 
-.recycling-title {
-    margin-bottom: 20px;
-    font-size: 50px;
-}
-
-.recycling-title, .recycling-text {
-    animation: appear 0.8s;
-}
-
-.recycling-text {
-    font-size: 20px;
-    line-height: 28px;
-}
-
-@keyframes appear {
-    0% {
-        transform: translateY(-5px);
-        opacity: 0;
-    }
-
-    100%  {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-
-@keyframes slide-left {
-    0% {
-        left: -47.5vw;
-    }
-
-    100% {
-        left:-40vw;
-    }
-}
-
 .inclusive {
     padding-left: 5vw;
     padding-right: 45vw;
-    overflow: hidden;
     background-color: var(--secondary-color);
 }
 
@@ -142,7 +121,7 @@
     content: "";
     position: absolute;
     right: -40vw;
-    width: 80Vw;
+    width: 80vw;
     height: 130vh;
     background-image: url(../images/inclusive.jpg);
     background-repeat: no-repeat;
@@ -150,45 +129,14 @@
     animation: slide-right 0.8s ease-out;
 }
 
-.inclusive-title {
-    margin-bottom: 20px;
-    font-size: 50px;
-}
-
-.inclusive-title, .inclusive-text {
+.inclusive .section-title,
+.inclusive .section-text {
     color: var(--primary-color);
-    animation: appear 0.8s;
 }
 
-.inclusive-text {
-    font-size: 20px;
-    line-height: 28px;
-}
-
-@keyframes appear {
-    0% {
-        transform: translateY(-5px);
-        opacity: 0;
-    }
-
-    100%  {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-
-@keyframes slide-right {
-    0% {
-        right: -47.5vw;
-    }
-
-    100% {
-        right: -40vw;
-    }
-}
-
-.freedom {
-    overflow: hidden;
+.freedom .section-title,
+.freedom .section-text {
+    color: var(--text-color);
 }
 
 .image-title-container {
@@ -200,5 +148,34 @@
     background-image: url(../images/freedom.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: red;
+}
+
+/* Animations */
+@keyframes appear {
+    0% {
+        transform: translateY(-5px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-left {
+    0% {
+        left: -47.5vw;
+    }
+    100% {
+        left: -40vw;
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        right: -47.5vw;
+    }
+    100% {
+        right: -40vw;
+    }
 }
