@@ -87,6 +87,11 @@ document.getElementById('contactForm').addEventListener('submit', async function
         if (data === "true") {
             sendButton.textContent = 'Envoyé';
             document.getElementById('contactForm').reset();
+
+            setTimeout(() => {
+                sendButton.disabled = false;
+                sendButton.textContent = 'Envoyer';
+            }, 2000);
         } else {
             throw new Error('Une erreur est survenue lors de l\'envoi du message.');
         }
@@ -97,6 +102,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
         sendButton.textContent = 'Réessayer';
     }
 });
+
 
 // Load
 window.addEventListener('load', () => {
