@@ -61,7 +61,7 @@
 }
 
 .card-title {
-    font-size: 20px;
+    font-size: 18px;
     color: var(--text-color);
     text-align: center;
 }
@@ -348,6 +348,10 @@
 
     .goals-card {
         width: 100%;
+    }
+
+    .card-button {
+        height: 40px;
     }
     
     .section-title {
