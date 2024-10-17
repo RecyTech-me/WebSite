@@ -48,6 +48,7 @@ button:hover {
 }
 
 .main-section {
+    padding: var(--main-section-padding);
     position: relative;
     display: flex;
     justify-content: center;
