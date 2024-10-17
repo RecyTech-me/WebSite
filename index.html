@@ -52,6 +52,7 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/goals.css">
     <link rel="stylesheet" href="./styles/about.css">
     <link rel="stylesheet" href="./styles/team.css">
     <link rel="stylesheet" href="./styles/contact.css">
@@ -73,7 +74,7 @@
         <div class="header-separator"></div>
         <div id="headerLinks" class="header-links">
             <p id="headerLinkhome" class="header-link" onclick="smoothScroll('headerLinkhome', 'home')">Accueil</p>
-            <p id="headerLinkGoals" class="header-link" onclick="smoothScroll('headerLinkhome', 'goals   ')">Nos objectifs</p>
+            <p id="headerLinkGoals" class="header-link" onclick="smoothScroll('headerLinkhome', 'goals')">Nos objectifs</p>
             <p id="headerLinkAbout" class="header-link" onclick="smoothScroll('headerLinkAbout', 'about')">À propos</p>
             <p id="headerLinkTeam" class="header-link" onclick="smoothScroll('headerLinkTeam', 'team')">Équipe</p>
             <p id="headerLinkContact" class="header-link" onclick="smoothScroll('headerLinkContact', 'contact')">Contact</p>
@@ -115,6 +116,55 @@
             </div>
         </section>
 
+        <section id="goals" class="main-section goals">
+            <h1 class="goals-title">Nos objectifs</h1>
+            <div class="goals-cards">
+                <div class="goals-card">
+                    <div class="card-container">
+                        <h1 class="card-title">Une seconde vie pour les PC</h1>
+                        <button class="card-button" onclick="smoothScroll('headerLinkhome', 'recycling')">Voir</button>
+                    </div>
+                </div>
+                <div class="goals-card">
+                    <div class="card-container">
+                        <h1 class="card-title">Un PC pour tous</h1>
+                        <button class="card-button" onclick="smoothScroll('headerLinkhome', 'inclusive')">Voir</button>
+                    </div>
+                </div>
+                <div class="goals-card">
+                    <div class="card-container">
+                        <h1 class="card-title">Un système libre</h1>
+                        <button class="card-button" onclick="smoothScroll('headerLinkhome', 'freedom')">Voir</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="recycling" class="main-section recycling">
+            <div class="recycling-container">
+                <h1 class="section-title">Une seconde vie pour les PC</h1>
+                <p class="section-text">La création d’un ordinateur, de la collecte des matières premières à l’assemblage et au transport, a un impact significatif sur le réchauffement climatique, la diminution des ressources et le respect des droits humains. Ce phénomène, déjà énorme, s’intensifie avec notre consommation croissante. Chez Recytech, nous sommes conscients du fait que certaines écoles jettent des ordinateurs parce qu'ils sont légèrement abîmés ou d'ancienne génération. Ces machines, encore fonctionnelles, méritent une seconde vie. Nous croyons fermement que la surconsommation électronique doit cesser et nous nous engageons à donner une nouvelle chance à ces équipements, contribuant ainsi à un avenir plus durable.</p>
+            </div>
+        </section>
+        
+        <section id="inclusive" class="main-section inclusive">
+            <div class="inclusive-container">
+                <h1 class="section-title">Des PC pour tous</h1>
+                <p class="section-text">Il est évident que dans un monde chaque jour davantage numérisé, posséder un ordinateur est quasiment indispensable pour toutes les tâches du quotidien. Cependant, nombre de personnes n'ont pas les moyens financiers de s'acheter un tel outil. C'est pourquoi RecyTech propose de revendre des ordinateurs récupérés chez des écoles qui n'en ont plus besoin. Ces appareils sont revendus à un prix bien moindre par rapport au prix neuf, ce qui permet à ces personnes de se procurer des ordinateurs de bonne qualité. Cette initiative favorise non seulement l'accès à la technologie pour tous, mais contribue également à la réduction des déchets électroniques.</p>
+            </div>
+        </section>
+        
+        <section id="freedom" class="main-section freedom">
+            <div id="imageTitleContainer" class="image-title-container">
+                <h1 class="section-title">Un système libre</h1>
+            </div>
+                <div class="freedom-container">
+                    <h1 class="section-title alt">Un système libre</h1>
+                    <p class="section-text">RecyTech croit fondamentalement à la promotion et à l'utilisation d'outils libres et open source. De tels outils permettent, la plupart du temps, de garantir la vie privée des utilisateurs, souvent mise en péril dans la société actuelle. Ils assurent également une sécurité accrue et favorisent la collaboration pour construire tous ensemble un meilleur projet. C'est pourquoi nous proposons d'installer par défaut sur nos ordinateurs des distributions de Linux, un système d'exploitation libre et open source. Cette démarche s'inscrit dans notre engagement à offrir des solutions technologiques accessibles, sécurisées et respectueuses de la vie privée. Nous sommes convaincus que l'adoption de logiciels libres est un pas important vers une société plus équitable et transparente.
+                </div>
+            </p>
+        </section>
+        
         <section id="about" class="main-section about">
             <div class="about-text-content">
                 <h2 class="about-title">À propos</h2>
@@ -127,9 +177,7 @@
                     Chaque machine est soigneusement vérifiée et remise en état, offrant une solution économique et durable pour les étudiants, les petites entreprises, et toute personne à la recherche d'un PC fiable à petit prix.
                 </p>
             </div>
-            <div class="about-image-content">
-                <img class="about-image" src="./images/template.jpg" alt="Reconditionnement d'ordinateurs">
-            </div>
+            <img class="about-image" src="./images/template.jpg" alt="Reconditionnement d'ordinateurs">
         </section>
 
         <section id="team" class="main-section team">

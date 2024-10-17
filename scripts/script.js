@@ -138,3 +138,29 @@ Colonne: ${colno}
     // Empêche l'affichage de l'erreur dans la console du navigateur
     event.preventDefault();
 });
+
+
+// On scroll animations
+document.addEventListener('DOMContentLoaded', () => {
+    const elements = [
+        document.getElementById("recycling"),
+        document.getElementById("inclusive"),
+        document.getElementById("imageTitleContainer"),
+        ...document.querySelectorAll(".section-title"),
+        ...document.querySelectorAll(".section-text")
+    ].filter(el => el);
+
+    window.addEventListener("scroll", () => {
+        const clientHeight = document.documentElement.clientHeight;
+
+        elements.forEach(element => {
+            const topElementToTopViewport = element.getBoundingClientRect().top;
+
+            if (topElementToTopViewport <= clientHeight * 0.80) {
+                element.classList.add("active");
+            }
+        });
+    });
+});
+
+

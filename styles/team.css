@@ -3,7 +3,7 @@
 }
 
 .team-cards {
-    padding: 2% 25px 2% 25px;
+    padding: 2% 50px 2% 50px;
     gap: 20px;
     display: flex;
     justify-content: center;
@@ -87,7 +87,6 @@
 }
 
 @media screen and (max-width: 1760px) {
-
     .team-cards {
         padding: 10px 45px 10px 45px;
         justify-content: left;
@@ -147,6 +146,12 @@
         min-width: 78vw;
     }
 }
+
+@media screen and (max-width: 425px) {
+    .team-cards {
+        padding: 10px 30px 10px 30px;
+    }
+} 
 
 @media screen and (max-width: 415px) {
     .member-name {

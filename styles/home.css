@@ -1,9 +1,11 @@
 .home {
+    padding: var(--main-section-padding);
+    padding-top: 0px;
     display: flex;
     gap: 150px;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - var(--header-height));
+    height: calc(100vh - var(--main-header-height));
 }
 
 .home-container {
@@ -65,24 +67,17 @@
     font-size: clamp(25px, 3vw, 30px);
     border-radius: 40px;
     color: var(--secondary-color);
-    cursor: pointer;
     width: 82.5%;
     text-align: center;
     line-height: 80px;
     height: 80px;
-    transition: 1.2s;
     user-select: none;
-}
-
-.buy-button:hover {
-    transform: scale(0.95);
 }
 
 .contact {
     background-color: var(--secondary-color); 
 }
 
-/* Animation fade-in */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -94,7 +89,6 @@
     transform: translateY(0);
 }
 
-/* Animation slide-in */
 .slide-in {
     opacity: 0;
     transform: translateX(-20px);
@@ -170,11 +164,5 @@
     .buy-image {
         object-fit: cover;
         height: 40vh;
-    }
-}
-
-@media (pointer: coarse) {
-    .buy-button:hover {
-        transform: scale(1);
     }
 }
