@@ -1,4 +1,4 @@
-// Navigation - Smooth Scroll
+// Smooth Scroll Functionality
 function smoothScroll(linkId, targetId) {
     const targetElement = document.getElementById(targetId);
     let elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
@@ -11,7 +11,7 @@ function smoothScroll(linkId, targetId) {
     });
 }
 
-// Hamburger menu
+// Hamburger Menu Functionality
 const body = document.body;
 const header = document.getElementById("mainHeader");
 const headerBackground = document.getElementById("headerBackground");
@@ -29,12 +29,12 @@ function toggleHamburgerMenu() {
     hamburgerMenu.classList.toggle("active");
 
     if (headerLinks.classList.contains("is-hamburger-active")) {
-        headerLink.forEach((el, index) => {
+        headerLink.forEach((el) => {
             el.classList.add('is-hamburger-active');
-            body.style.overflow = "hidden"
+            body.style.overflow = "hidden";
         });
     } else {
-        body.style.overflow = "scroll"
+        body.style.overflow = "scroll";
         headerLink.forEach(el => el.style.display = "none");
         headerLink.forEach(el => el.classList.remove('is-hamburger-active'));
         setTimeout(function() {
@@ -59,8 +59,9 @@ headerLink.forEach((link) => {
     });
 });
 
-// Contact Form
-document.getElementById('contactForm').addEventListener('submit', async function(event) {
+// Contact Form Submission
+const contactForm = document.getElementById('contactForm');
+contactForm.addEventListener('submit', async function(event) {
     event.preventDefault();
 
     const email = document.getElementById('email').value.trim();
@@ -86,7 +87,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
         if (data === "true") {
             sendButton.textContent = 'Envoyé';
-            document.getElementById('contactForm').reset();
+            contactForm.reset();
 
             setTimeout(() => {
                 sendButton.disabled = false;
@@ -103,8 +104,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
     }
 });
 
-
-// Load
+// Page Load Overlay Handling
 window.addEventListener('load', () => {
     const overlay = document.getElementById('overlay');
     overlay.style.transition = 'opacity 0.5s ease';
@@ -118,7 +118,7 @@ window.addEventListener('load', () => {
     console.log('%c[Loader] Page chargée sans erreurs!', 'color: green; font-weight: bold;');
 });
 
-// Crash Handling
+// Global Error Handling and Reload
 window.addEventListener('error', event => {
     const overlay = document.getElementById('overlay');
     overlay.style.display = 'flex';
@@ -141,12 +141,10 @@ Colonne: ${colno}
     console.error('%c[Loader] Une erreur est survenue ! Reload de la page.', 'color: red; font-weight: bold;');
     console.error(errorMsg);
 
-    // Empêche l'affichage de l'erreur dans la console du navigateur
     event.preventDefault();
 });
 
-
-// On scroll animations
+// Scroll Animation for Elements
 document.addEventListener('DOMContentLoaded', () => {
     const elements = [
         document.getElementById("recycling"),
@@ -168,5 +166,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
-
