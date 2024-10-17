@@ -141,23 +141,26 @@ Colonne: ${colno}
 
 
 // On scroll animations
-const elements = [
-    document.getElementById("recycling"),
-    document.getElementById("inclusive"),
-    document.getElementById("freedom"),
-    ...document.querySelectorAll(".section-title"),
-    ...document.querySelectorAll(".section-text")
-].filter(el => el);
+document.addEventListener('DOMContentLoaded', () => {
+    const elements = [
+        document.getElementById("recycling"),
+        document.getElementById("inclusive"),
+        document.getElementById("imageTitleContainer"),
+        ...document.querySelectorAll(".section-title"),
+        ...document.querySelectorAll(".section-text")
+    ].filter(el => el);
 
-window.addEventListener("scroll", () => {
-    const clientHeight = document.documentElement.clientHeight;
+    window.addEventListener("scroll", () => {
+        const clientHeight = document.documentElement.clientHeight;
 
-    elements.forEach(element => {
-        const topElementToTopViewport = element.getBoundingClientRect().top;
+        elements.forEach(element => {
+            const topElementToTopViewport = element.getBoundingClientRect().top;
 
-        if (topElementToTopViewport <= clientHeight * 0.80) {
-            element.classList.add("active");
-        }
+            if (topElementToTopViewport <= clientHeight * 0.80) {
+                element.classList.add("active");
+            }
+        });
     });
 });
+
 

@@ -73,22 +73,27 @@
     background-color: var(--text-color);
 }
 
+.section-title,
+.section-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
 .section-title {
     margin-bottom: 20px;
-    display: none;
     font-size: 50px;
 }
 
 .section-text {
-    display: none;
     font-size: 20px;
     line-height: 28px;
 }
 
 .section-title.active,
 .section-text.active {
-    display: block;
-    animation: appear 0.8s forwards;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .recycling,
@@ -114,7 +119,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0;
-    transition: left 0.8s ease-out, opacity 0.8s;
+    transition: left 0.8s ease-out, opacity 0.8s ease-out;
 }
 
 .recycling.active::before {
@@ -139,7 +144,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0;
-    transition: right 0.8s ease-out, opacity 0.8s;
+    transition: right 0.8s ease-out, opacity 0.8s ease-out;
 }
 
 .inclusive.active::before {
@@ -152,30 +157,101 @@
     color: var(--primary-color);
 }
 
-.freedom .section-title,
 .freedom .section-text {
+    margin-top: 50vh;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: var(--secondary-color);
+}
+
+.freedom .section-title {
+    margin-bottom: 50px;
+
     color: var(--text-color);
+    text-shadow: 1px 1px 0px #00000020;
 }
 
 .image-title-container {
     border-radius: 50%;
     position: absolute;
-    top: -35vh;
+    top: -52.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     width: 105vw;
     height: 100vh;
     background-image: url(../images/freedom.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 0;
+    transition: top 0.8s ease-out, opacity 0.8s ease-out;
 }
 
-/* Animations */
-@keyframes appear {
-    0% {
-        transform: translateY(20px);
-        opacity: 0;
+.image-title-container.active {
+    top: -45vh;
+    opacity: 1;
+}
+
+.recycling::before,
+.inclusive::before {
+    opacity: 0;
+}
+
+.recycling.active::before,
+.inclusive.active::before {
+    opacity: 1;
+}
+
+@media screen and (max-width: 1410px) {
+    .section-title {
+        font-size: 3.5vw;
     }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
+
+    .section-text {
+        font-size: 1.6vw;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .section-text {
+        line-height: 2.8vw;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .recycling {
+        padding-left: 50px;
+    }
+
+    .inclusive {
+        padding-right: 50px;
+    }
+
+    .recycling::before, .inclusive::before {
+        width: calc(120vw);
+    }
+    
+    .recycling-container, .inclusive-container {
+        border-radius: var(--border-radius);
+        padding: 20px;
+        width: 65vw;
+        z-index: 1;
+        background-color: var(--secondary-color);
+        max-height: calc(100vh - 160px)
+    }
+
+    .section-title {
+        color: var(--text-color);
+        font-size: 30px;
+    }
+
+    .section-text {
+        color: var(--text-color);
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .section-text {
+
     }
 }
