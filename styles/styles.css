@@ -22,6 +22,7 @@
 
     --main-header-height: 80px;
     --main-section-padding: 80px 50px 0px 50px;
+    --main-section-padding-mobile: 80px 30px 0px 30px;
 }
 
 body {

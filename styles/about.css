@@ -66,7 +66,7 @@
 
 @media screen and (max-width: 500px) {
     .about {
-        padding: 30px;
+        padding: var(--main-section-padding-mobile);
         align-items: center;
         justify-content: center;
     }

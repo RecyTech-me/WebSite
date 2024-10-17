@@ -167,9 +167,12 @@
 
 .freedom .section-title {
     margin-bottom: 50px;
-
     color: var(--text-color);
     text-shadow: 1px 1px 0px #00000020;
+}
+
+.freedom .section-title.alt {
+    display: none;
 }
 
 .image-title-container {
@@ -253,8 +256,29 @@
     }
 }
 
+@media screen and (max-width: 930px) {
+    .goals-title {
+        font-size: calc(5vw + 5vw);
+    }
+    
+    .goals-cards {
+        flex-direction: column;
+    }
+
+    .goals-card {
+        height: calc(100vh / 3 - 150px);
+        width: calc(100vw - 140px);
+    }
+
+    .card-container {
+        height: 100%;
+        border-radius: var(--border-radius);
+    }
+
+}
+
 @media screen and (max-width: 750px) {
-    .recycling, .inclusive {
+    .recycling, .inclusive, .freedom {
         padding-left: 30px;
         padding-right: 30px;
     }
@@ -263,10 +287,11 @@
         width: calc(120vw);
     }
     
-    .recycling-container, .inclusive-container {
+    .recycling-container, .inclusive-container, .freedom-container {
         border-radius: var(--border-radius);
         padding: 20px;
         z-index: 1;
+        color: var(--text-color);
         background-color: var(--secondary-color);
         max-height: calc(100vh - 160px)
     }
@@ -275,7 +300,27 @@
         background-color: var(--primary-color);
     }
 
+    .image-title-container {
+        height: 125vh;
+        width: 200vw;
+    }
+
+    .image-title-container .section-title {
+        display: none;
+    }
+
+    .freedom .section-title.alt {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .freedom .section-text {
+        color: var(--text-color);
+        margin: 0px;
+    }
+
     .section-title {
+        margin-bottom: 5px;
         color: var(--text-color);
         font-size: 30px;
     }
@@ -289,5 +334,27 @@
 
     .inclusive .section-title, .inclusive .section-text {
         color: var(--secondary-color);
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .goals {
+        padding: var(--main-section-padding-mobile)
+    }
+
+    .goals-cards {
+        width: 100%;
+    }
+
+    .goals-card {
+        width: 100%;
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
+
+    .section-text {
+        font-size: 14px;
     }
 }
