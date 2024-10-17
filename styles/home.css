@@ -173,18 +173,6 @@
     }
 }
 
-@media screen and (max-height: 875px) {
-    .buy-images-container {
-        margin-top: -4vh;
-    }
-}
-
-@media screen and (max-height: 825px) {
-    .buy-images-container {
-        margin-top: -2vh;
-    }
-}
-
 @media (pointer: coarse) {
     .buy-button:hover {
         transform: scale(1);
