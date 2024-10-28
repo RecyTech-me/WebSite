@@ -1,8 +1,8 @@
-// Navigation - Smooth Scroll
+// Smooth Scroll Functionality
 function smoothScroll(linkId, targetId) {
     const targetElement = document.getElementById(targetId);
     let elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-    if (targetId === "product") {
+    if (targetId === "home") {
         elementPosition -= 80;
     }
     window.scrollTo({
@@ -11,7 +11,7 @@ function smoothScroll(linkId, targetId) {
     });
 }
 
-// Hamburger Menu
+// Hamburger Menu Functionality
 const body = document.body;
 const header = document.getElementById("mainHeader");
 const headerBackground = document.getElementById("headerBackground");
@@ -21,30 +21,37 @@ const headerLink = document.querySelectorAll(".header-link");
 const hamburgerMenu = document.getElementById("hamburgerMenu");
 
 function toggleHamburgerMenu() {
-    const isActive = header.classList.toggle("is-hamburger-active");
-
-    [body, headerBackground, headerTitle, headerLinks].forEach(el => {
-        el.classList.toggle("is-hamburger-active");
-    });
-
+    body.classList.toggle("is-hamburger-active");
+    header.classList.toggle("is-hamburger-active");
+    headerBackground.classList.toggle("is-hamburger-active");
+    headerTitle.classList.toggle("is-hamburger-active");
+    headerLinks.classList.toggle("is-hamburger-active");
     hamburgerMenu.classList.toggle("active");
-    body.style.overflow = isActive ? "hidden" : "visible";
 
-    headerLink.forEach(el => {
-        el.classList.toggle('is-hamburger-active');
-        el.style.display = isActive ? "flex" : "none";
-    });
+    if (headerLinks.classList.contains("is-hamburger-active")) {
+        headerLink.forEach((el) => {
+            el.classList.add('is-hamburger-active');
+            body.style.overflow = "hidden";
+        });
+    } else {
+        body.style.overflow = "scroll";
+        headerLink.forEach(el => el.style.display = "none");
+        headerLink.forEach(el => el.classList.remove('is-hamburger-active'));
+        setTimeout(function() {
+            headerLink.forEach(el => el.style.display = "flex");
+        }, 100);
+    }
 }
 
 hamburgerMenu.addEventListener("click", toggleHamburgerMenu);
 
 window.addEventListener("resize", () => {
-    if (window.innerWidth > 700 && header.classList.contains("is-hamburger-active")) {
+    if (window.innerWidth > 800 && header.classList.contains("is-hamburger-active")) {
         toggleHamburgerMenu();
     }
 });
 
-headerLink.forEach(link => {
+headerLink.forEach((link) => {
     link.addEventListener('click', () => {
         if (header.classList.contains('is-hamburger-active')) {
             toggleHamburgerMenu();
@@ -52,8 +59,9 @@ headerLink.forEach(link => {
     });
 });
 
-// Contact Form
-document.getElementById('contactForm').addEventListener('submit', async function(event) {
+// Contact Form Submission
+const contactForm = document.getElementById('contactForm');
+contactForm.addEventListener('submit', async function(event) {
     event.preventDefault();
 
     const email = document.getElementById('email').value.trim();
@@ -79,7 +87,12 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
         if (data === "true") {
             sendButton.textContent = 'Envoyé';
-            document.getElementById('contactForm').reset();
+            contactForm.reset();
+
+            setTimeout(() => {
+                sendButton.disabled = false;
+                sendButton.textContent = 'Envoyer';
+            }, 2000);
         } else {
             throw new Error('Une erreur est survenue lors de l\'envoi du message.');
         }
@@ -91,7 +104,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
     }
 });
 
-// Load
+// Page Load Overlay Handling
 window.addEventListener('load', () => {
     const overlay = document.getElementById('overlay');
     overlay.style.transition = 'opacity 0.5s ease';
@@ -105,7 +118,7 @@ window.addEventListener('load', () => {
     console.log('%c[Loader] Page chargée sans erreurs!', 'color: green; font-weight: bold;');
 });
 
-// Crash Handling
+// Global Error Handling and Reload
 window.addEventListener('error', event => {
     const overlay = document.getElementById('overlay');
     overlay.style.display = 'flex';
@@ -128,6 +141,28 @@ Colonne: ${colno}
     console.error('%c[Loader] Une erreur est survenue ! Reload de la page.', 'color: red; font-weight: bold;');
     console.error(errorMsg);
 
-    // Empêche l'affichage de l'erreur dans la console du navigateur
     event.preventDefault();
+});
+
+// Scroll Animation for Elements
+document.addEventListener('DOMContentLoaded', () => {
+    const elements = [
+        document.getElementById("recycling"),
+        document.getElementById("inclusive"),
+        document.getElementById("imageTitleContainer"),
+        ...document.querySelectorAll(".section-title"),
+        ...document.querySelectorAll(".section-text")
+    ].filter(el => el);
+
+    window.addEventListener("scroll", () => {
+        const clientHeight = document.documentElement.clientHeight;
+
+        elements.forEach(element => {
+            const topElementToTopViewport = element.getBoundingClientRect().top;
+
+            if (topElementToTopViewport <= clientHeight * 0.80) {
+                element.classList.add("active");
+            }
+        });
+    });
 });

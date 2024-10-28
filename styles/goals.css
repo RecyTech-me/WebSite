@@ -1,0 +1,364 @@
+.goals {
+    padding: var(--main-section-padding);
+    gap: 20px;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+}
+
+.goals-title {
+    font-size: 80px;
+    color: var(--primary-color);
+}
+
+.goals-cards {
+    border-radius: calc(var(--border-radius) + 50px);
+    padding: 50px;
+    display: flex;
+    gap: 40px;
+    background-color: var(--primary-color);
+}
+
+.goals-card {
+    border-radius: var(--border-radius);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 350px;
+    height: 250px;
+    background-color: var(--primary-color);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.goals-card:nth-child(1) {
+    background-image: url(../images/recycling.jpg);
+}
+
+.goals-card:nth-child(2) {
+    background-image: url(../images/inclusive.jpg);
+}
+
+.goals-card:nth-child(3) {
+    background-image: url(../images/freedom.jpg);
+}
+
+.card-container {
+    border-top: 1px solid rgba(255, 255, 255, 0.212);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.card-title {
+    font-size: 18px;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.card-button {
+    border-radius: var(--border-radius);
+    width: 45%;
+    height: 45px;
+    font-size: 16px;
+    background-color: var(--text-color);
+}
+
+.section-title,
+.section-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section-title {
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.section-text {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.section-title.active,
+.section-text.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.recycling,
+.inclusive,
+.freedom {
+    overflow: hidden;
+    position: relative;
+}
+
+.recycling {
+    padding-left: 45vw;
+    padding-right: 5vw;
+}
+
+.recycling::before {
+    border-radius: 100%;
+    content: "";
+    position: absolute;
+    left: -47.5vw;
+    width: 80vw;
+    height: 130vh;
+    background-image: url(../images/recycling.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    transition: left 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.recycling.active::before {
+    left: -40vw;
+    opacity: 1;
+}
+
+.inclusive {
+    padding-left: 5vw;
+    padding-right: 45vw;
+    background-color: var(--secondary-color);
+}
+
+.inclusive::before {
+    border-radius: 100%;
+    content: "";
+    position: absolute;
+    right: -47.5vw;
+    width: 80vw;
+    height: 130vh;
+    background-image: url(../images/inclusive.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    transition: right 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.inclusive.active::before {
+    right: -40vw;
+    opacity: 1;
+}
+
+.inclusive .section-title,
+.inclusive .section-text {
+    color: var(--primary-color);
+}
+
+.freedom .section-text {
+    margin-top: 50vh;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: var(--secondary-color);
+}
+
+.freedom .section-title {
+    margin-bottom: 50px;
+    color: var(--text-color);
+    text-shadow: 1px 1px 0px #00000020;
+}
+
+.freedom .section-title.alt {
+    display: none;
+}
+
+.image-title-container {
+    border-radius: 50%;
+    position: absolute;
+    top: -52.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 105vw;
+    height: 100vh;
+    background-image: url(../images/freedom.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    transition: top 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.image-title-container.active {
+    top: -45vh;
+    opacity: 1;
+}
+
+.recycling::before,
+.inclusive::before {
+    opacity: 0;
+}
+
+.recycling.active::before,
+.inclusive.active::before {
+    opacity: 1;
+}
+
+@media screen and (max-width: 1410px) {
+    .section-title {
+        font-size: 3.5vw;
+    }
+
+    .section-text {
+        font-size: 1.6vw;
+    }
+}
+
+@media screen and (max-width: 1330px) {
+    .goals-cards {
+        border-radius: calc(var(--border-radius) + 30px);
+        padding: 30px;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 1270px) {
+    .goals-cards {
+        border-radius: calc(var(--border-radius) + 20px);
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .goals-card {
+        height: 400px;
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .goals-cards {
+        border-radius: calc(var(--border-radius) + 20px);
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .goals-card {
+        height: 350px;
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .section-text {
+        line-height: 2.8vw;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .goals-title {
+        font-size: calc(5vw + 5vw);
+    }
+    
+    .goals-cards {
+        flex-direction: column;
+    }
+
+    .goals-card {
+        height: calc(100vh / 3 - 150px);
+        width: calc(100vw - 140px);
+    }
+
+    .card-container {
+        height: 100%;
+        border-radius: var(--border-radius);
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+    .recycling, .inclusive, .freedom {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .recycling::before, .inclusive::before {
+        width: calc(120vw);
+    }
+    
+    .recycling-container, .inclusive-container, .freedom-container {
+        border-radius: var(--border-radius);
+        padding: 20px;
+        z-index: 1;
+        color: var(--text-color);
+        background-color: var(--secondary-color);
+        max-height: calc(100vh - 160px)
+    }
+
+    .inclusive-container {
+        background-color: var(--primary-color);
+    }
+
+    .image-title-container {
+        height: 125vh;
+        width: 200vw;
+    }
+
+    .image-title-container .section-title {
+        display: none;
+    }
+
+    .freedom .section-title.alt {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .freedom .section-text {
+        color: var(--text-color);
+        margin: 0px;
+    }
+
+    .section-title {
+        margin-bottom: 5px;
+        color: var(--text-color);
+        font-size: 30px;
+    }
+
+    .section-text {
+        color: var(--text-color);
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+
+    .inclusive .section-title, .inclusive .section-text {
+        color: var(--secondary-color);
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .goals {
+        padding: var(--main-section-padding-mobile)
+    }
+
+    .goals-cards {
+        width: 100%;
+    }
+
+    .goals-card {
+        width: 100%;
+    }
+
+    .card-button {
+        height: 40px;
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
+
+    .section-text {
+        font-size: 14px;
+    }
+}
