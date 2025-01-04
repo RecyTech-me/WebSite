@@ -80,7 +80,7 @@
     transform: scale(0.95);
 }
 
-@media screen and (min-width: 2000px) {
+@media screen and (min-width: 2220px) {
     .team-cards {
         gap: 30px;
     }
