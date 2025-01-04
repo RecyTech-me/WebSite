@@ -362,3 +362,9 @@
         font-size: 14px;
     }
 }
+
+@media screen and (max-width: 375px) {
+    .card-title {
+        font-size: 17px;
+    }
+}
