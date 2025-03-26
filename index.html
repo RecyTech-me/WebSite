@@ -70,25 +70,29 @@
         <div id="loading-text">RecyTech Shop</div>
     </div>
 
-    <header id="mainHeader" class="main-header">
+    <header id="header" class="header">
         <div id="headerBackground" class="header-background"></div>
-        <img class="header-logo" src="./images/logo.svg" alt="RecyTech logo" onclick="window.location.reload()">
+        
+        <img class="header-logo" src="./images/recytech-logo.svg" alt="RecyTech logo" onclick="window.location.reload()">
+        
         <h1 id="headerTitle" class="header-title">RecyTech</h1>
+        
         <div class="header-separator"></div>
-        <div id="headerLinks" class="header-links">
-            <p id="headerLinkhome" class="header-link" onclick="smoothScroll('headerLinkhome', 'home')">Accueil</p>
-            <p id="headerLinkGoals" class="header-link" onclick="smoothScroll('headerLinkhome', 'goals')">Nos objectifs
-            </p>
-            <p id="headerLinkAbout" class="header-link" onclick="smoothScroll('headerLinkAbout', 'about')">À propos</p>
-            <p id="headerLinkTeam" class="header-link" onclick="smoothScroll('headerLinkTeam', 'team')">Équipe</p>
-            <p id="headerLinkContact" class="header-link" onclick="smoothScroll('headerLinkContact', 'contact')">Contact
-            </p>
-        </div>
-
-        <div class="hamburger-menu" id="hamburgerMenu">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+        
+        <nav id="headerLinks" class="header-links">
+            <a href="#home" id="headerLink" class="header-link">Accueil</a>
+            <a href="#goals" id="headerLink" class="header-link">Nos objectifs</a>
+            <a href="#about" id="headerLink" class="header-link">À propos</a>
+            <a href="#team" id="headerLink" class="header-link">Équipe</a>
+            <a href="#contact" id="headerLink" class="header-link">Contact</a>
+        </nav>
+        
+        <div class="hamburger-menu-container">
+            <div id="hamburgerMenu" class="hamburger-menu">
+                <div class="hamburger-menu-bar"></div>
+                <div class="hamburger-menu-bar"></div>
+                <div class="hamburger-menu-bar"></div>
+            </div>
         </div>
     </header>
 

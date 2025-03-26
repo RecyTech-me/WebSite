@@ -17,7 +17,7 @@
     --border-radius: 25px;
     --text-color: #FFFFFF;
 
-    --primary-color: #cf9100;
+    --primary-color: #e8dfca;
     --secondary-color: #4F6F52;
 
     --main-header-height: 80px;
@@ -25,8 +25,16 @@
     --main-section-padding-mobile: 80px 30px 0px 30px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
 	background-color: var(--primary-color);
+}
+
+body.extented {
+    overflow: hidden;
 }
 
 main {

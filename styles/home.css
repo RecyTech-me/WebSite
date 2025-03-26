@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     height: calc(100vh - var(--main-header-height));
+    scroll-margin-top: calc(var(--header-height) + 20px);
 }
 
 .home-container {
