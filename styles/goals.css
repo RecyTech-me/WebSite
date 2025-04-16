@@ -37,11 +37,11 @@
 }
 
 .goals-card:nth-child(2) {
-    background-image: url(../images/inclusive.jpg);
+    background-image: url(../images/inclusive.png);
 }
 
 .goals-card:nth-child(3) {
-    background-image: url(../images/freedom.jpg);
+    background-image: url(../images/freedom.png);
 }
 
 .card-container {
@@ -141,7 +141,7 @@
     right: -47.5vw;
     width: 80vw;
     height: 130vh;
-    background-image: url(../images/inclusive.jpg);
+    background-image: url(../images/inclusive.png);
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0;
@@ -184,7 +184,7 @@
     align-items: flex-end;
     width: 105vw;
     height: 100vh;
-    background-image: url(../images/freedom.jpg);
+    background-image: url(../images/freedom.png);
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0;
