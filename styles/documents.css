@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Raleway-SemiBold;
+    src: url(../fonts/Raleway-SemiBold.ttf);
+}
+
 html, body {
     height: 100%;
 }
@@ -27,5 +32,6 @@ body {
 }
 
 .folder-link {
+    font-family: Raleway-SemiBold;
     color: white;
 }
