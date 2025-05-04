@@ -87,6 +87,7 @@
 
 .footer-links {
     display: flex;
+    gap: 10px;
 }
 
 .footer-link {
