@@ -73,7 +73,8 @@
     <header id="header" class="header">
         <div id="headerBackground" class="header-background"></div>
 
-        <img class="header-logo" src="./images/recytech-logo.svg" alt="RecyTech logo" onclick="window.location.reload()">
+        <img class="header-logo" src="./images/recytech-logo.svg" alt="RecyTech logo"
+            onclick="window.location.reload()">
 
         <h1 id="headerTitle" class="header-title">RecyTech</h1>
 
@@ -120,8 +121,11 @@
                             <div class="buy-text">Produit 4</div>
                         </div>
                     </div>
-                    <button onclick="alert('La boutique n\'est pas encore disponible...')" class="buy-button">Visiter la
-                        boutique</button>
+                    <a href="https://shop.recytech.me">
+                        <button class="buy-button">Visiter la
+                            boutique</button>
+                    </a>
+
                 </div>
             </div>
         </section>
@@ -170,7 +174,8 @@
                 <p class="section-text">Il est évident que dans un monde chaque jour davantage numérisé, posséder un
                     ordinateur est quasiment indispensable pour toutes les tâches du quotidien. Cependant, nombre de
                     personnes n'ont pas les moyens financiers de s'acheter un tel outil. C'est pourquoi RecyTech propose
-                    de revendre des ordinateurs récupérés chez des organisations qui n'en ont plus besoin. Ces appareils sont
+                    de revendre des ordinateurs récupérés chez des organisations qui n'en ont plus besoin. Ces appareils
+                    sont
                     revendus à un prix bien moindre par rapport au prix neuf, ce qui permet à ces personnes de se
                     procurer des ordinateurs de bonne qualité. Cette initiative favorise non seulement l'accès à la
                     technologie pour tous, mais contribue également à la réduction des déchets électroniques.</p>
@@ -201,7 +206,8 @@
                 <h2 class="about-title">À propos</h2>
                 <p class="about-text">
                     Recytech est une association à but non lucratif, avec pour objectif de récupérer des ordinateurs
-                    usagés auprès des entreprises et organisations de la région, de les restaurer et de les revendre à prix abordables, avec
+                    usagés auprès des entreprises et organisations de la région, de les restaurer et de les revendre à
+                    prix abordables, avec
                     un choix de distributions Linux.
                 <p class="about-text">
                     L'objectif est de rendre l'informatique accessible tout en contribuant à la réduction des déchets
@@ -267,10 +273,12 @@
             <h2 class="contact-title">Contactez-nous</h2>
             <form id="contactForm" class="contact-form">
                 <label for="email" class="contact-label">Votre email :</label>
-                <input type="email" id="email" name="email" class="contact-input" placeholder="Entrez votre email" required>
+                <input type="email" id="email" name="email" class="contact-input" placeholder="Entrez votre email"
+                    required>
 
                 <label for="message" class="contact-label">Votre message :</label>
-                <textarea id="message" name="message" class="contact-textarea" placeholder="Entrez votre message" required></textarea>
+                <textarea id="message" name="message" class="contact-textarea" placeholder="Entrez votre message"
+                    required></textarea>
 
                 <button id="sendButton" type="submit" class="contact-button">Envoyer</button>
             </form>
@@ -293,4 +301,5 @@
         </section>
     </main>
 </body>
+
 </html>
