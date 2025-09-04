@@ -61,7 +61,7 @@ contactForm.addEventListener('submit', async function(event) {
     sendButton.textContent = 'Envoi en cours...';
 
     try {
-        const response = await fetch('https://rmbi.ch/jdm/api/send_contact.php', {
+        const response = await fetch('https://futureofthe.tech/api/send_contact.php', {
             method: 'POST',
             headers: {'Content-Type': 'application/x-www-form-urlencoded'},
             body: new URLSearchParams({email, contenu})
