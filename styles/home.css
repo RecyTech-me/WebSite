@@ -68,7 +68,7 @@
     font-size: clamp(25px, 3vw, 30px);
     border-radius: 40px;
     color: var(--secondary-color);
-    width: 82.5%;
+    /* width: 82.5%; */
     text-align: center;
     line-height: 80px;
     height: 80px;
