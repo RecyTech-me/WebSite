@@ -33,7 +33,7 @@ body {
 	background-color: var(--primary-color);
 }
 
-body.extented {
+body.expanded {
     overflow: hidden;
 }
 
