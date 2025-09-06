@@ -63,12 +63,16 @@
     left: 15px;
 }
 
+.buy-button-link {
+    width: 82.5%;
+}
+
 .buy-button {
     background-color: var(--text-color);
     font-size: clamp(25px, 3vw, 30px);
     border-radius: 40px;
     color: var(--secondary-color);
-    /* width: 82.5%; */
+    width: 100%;
     text-align: center;
     line-height: 80px;
     height: 80px;
