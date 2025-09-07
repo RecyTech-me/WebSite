@@ -3,6 +3,11 @@
     src: url(../fonts/Raleway-SemiBold.ttf);
 }
 
+@font-face {
+    font-family: Raleway-ExtraBold;
+    src: url(../fonts/Raleway-ExtraBold.ttf);
+}
+
 * {
     margin: 0;
     border: 0;
@@ -59,7 +64,6 @@ button:hover {
     padding: var(--main-section-padding);
     position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
     width: 100%;
     height: 100vh;
