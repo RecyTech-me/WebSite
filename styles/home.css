@@ -1,7 +1,7 @@
 .home {
     margin-top: var(--header-height);
     scroll-margin-top: var(--header-height);   
-    padding-top: 320px;
+    padding-top: calc(35vh + 50px);
     position: relative;
     display: flex;
     align-items: center;
