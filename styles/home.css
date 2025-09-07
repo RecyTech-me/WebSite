@@ -1,173 +1,143 @@
 .home {
-    padding: var(--main-section-padding);
-    padding-top: 0px;
-    display: flex;
-    gap: 150px;
-    align-items: center;
-    justify-content: center;
-    height: calc(100vh - var(--main-header-height));
-    scroll-margin-top: calc(var(--header-height) + 20px);
-}
-
-.home-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 100px;
-    width: 100%;
-}
-
-.slogan {
-    color: var(--secondary-color);
-    font-size: clamp(23px, 5vw, 55px);
-}
-
-.container-buy {
-    background-color: var(--secondary-color);
-    width: 425px;
-    height: 535px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: calc(var(--border-radius) + 37px);
-    gap: 20px;
-}
-
-.buy-images-container {
-    display: flex;
-    width: 82.5%;
-    height: 360px;  
-    overflow: hidden;
-    border-radius: var(--border-radius);
+    margin-top: var(--header-height);
+    scroll-margin-top: var(--header-height);   
+    padding-top: 320px;
     position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - var(--header-height));
 }
 
-.buy-image-wrapper {
-    width: 100%;
-    flex-shrink: 0;
-    animation: changeImage 27s infinite;
+.home-title {
+    display: flex;
+    gap: 10px;
 }
 
-.buy-image {
-    width: 360px;
+.home-title-char {
+    font-size: 140px;
+    font-family: "Raleway-ExtraBold";
+    text-transform: uppercase;
+    animation: opacity-slide-down 1.5s;
 }
 
-.buy-text {
-    color: var(--text-color);
-    text-shadow: 1px 1px #0000004f;
-    font-size: 1.3em;
-    width: 82.5%;
+.home-title-char:nth-of-type(2), .home-title-char:nth-of-type(3) {
+    position: relative;
+    z-index: 1;
+    opacity: 1;
+}
+
+.home-button {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    width: 190px;
+    font-size: 18px;
+    opacity: 0;
+    animation: opacity 2s forwards;
+    animation-delay: 0.8s;
+}
+
+.home-button-arrow {
+    transform: translateY(1.5px);
+    width: 18px;
+}
+
+.home-forest-image {
+    left: 50%;
+    bottom: 0;
     position: absolute;
-    bottom: 15px;
-    left: 15px;
-}
-
-.buy-button-link {
-    width: 82.5%;
-}
-
-.buy-button {
-    background-color: var(--text-color);
-    font-size: clamp(25px, 3vw, 30px);
-    border-radius: 40px;
-    color: var(--secondary-color);
+    transform: translateX(-50%);
     width: 100%;
-    text-align: center;
-    line-height: 80px;
-    height: 80px;
-    user-select: none;
+    max-width: 1500px;
+    animation: slide-up 1.5s;
 }
 
-.contact {
-    background-color: var(--secondary-color); 
+@keyframes slide-up {
+    from {
+        transform: translate(-50%, 100px);
+    }
+
+    to {
+        transform: translate(-50%, 0px);
+    }
 }
 
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+@keyframes opacity-slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
-.slide-in {
-    opacity: 0;
-    transform: translateX(-20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+@media (max-width: 1400px) {
+.home {
+        overflow: hidden;
+    }
+
+    .home-forest-image {
+        width: 1400px;
+    }
 }
 
-.slide-in.visible {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-@keyframes changeImage {
-    0%, 12.5% { transform: translateX(0%); }
-    25%, 37.5% { transform: translateX(-100%); }
-    50%, 62.5% { transform: translateX(-200%); }
-    75%, 87.5% { transform: translateX(-300%); }
-    100% { transform: translateX(0%); }    
-}
-
-/* Styles réactifs */
-@media screen and (max-width: 990px) {
-    .home-container {
-        flex-direction: column;
-        gap: 2vh;
-        position: relative;
+@media (max-width: 900px) {
+    .home-forest-image {
+        width: 1000px;
     }
     
-    .container-buy {
-        width: 415px;
-        height: 525px;
+    .home-title {
+        gap: 5px;
     }
-
-    .about-text, .about-title {
-        font-size: 5px;
+    
+    .home-title-char {
+        font-size: 15vw;
     }
 }
 
-@media screen and (max-width: 425px) {
-    .main-section {
-        padding-left: 0;
-        padding-right: 0;
-    }   
-
-    .home-container {
-        gap: 0;
+@media (max-width: 900px) {
+    .home {
+        padding-top: 150px;
     }
-
-    .slogan {
-        margin-bottom: -18px;
-        width: calc(100% - 70px);
-    }
-
-    .container-buy {
-        width: 100%;
-        background-color: transparent;
+    
+    .home-title {
+        gap: 0px;
     }
 }
 
-@media screen and (max-height: 950px) {
-    .container-buy {
-        height: calc(40vh + 34px + 139px);
+@media (max-height: 850px) {
+    .home-title-char {
+        z-index: 1;
     }
-    
-    .buy-images-container {
-        margin-top: -0.5vh;
-    }
-    
-    .buy-image-wrapper,
-    .buy-images-container {
-        height: 40vh;
+}
+
+@media (max-width: 500px) {
+    .home-button {
+        width: 150px;
+        font-size: 0.875em;
     }
 
-    .buy-image {
-        object-fit: cover;
-        height: 40vh;
+    .home-button-arrow {
+        width: 14px;
     }
 }
