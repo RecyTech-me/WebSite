@@ -1,13 +1,14 @@
 .team {
     padding: 0px;
+    justify-content: center;
 }
 
 .team-cards {
     padding: 2% 50px 2% 50px;
     gap: 20px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    overflow: auto;
 }
 
 .member-card {
@@ -80,9 +81,13 @@
     transform: scale(0.95);
 }
 
-@media screen and (min-width: 2220px) {
+@media screen and (max-width: 2220px) {
     .team-cards {
         gap: 30px;
+    }
+
+    .team {
+        justify-content: left;
     }
 }
 
