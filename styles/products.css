@@ -30,6 +30,7 @@
 .product-title {
     font-family: Raleway-ExtraBold;
     font-size: 70px;
+    white-space: nowrap;
 }
 
 .product-starting-price {

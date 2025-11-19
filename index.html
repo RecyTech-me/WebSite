@@ -51,19 +51,19 @@
     <link rel="icon" href="images/favicons/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="images/favicons/favicon.ico" type="image/x-icon">
 
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="stylesheet" href="./styles/header.css">
-    <link rel="stylesheet" href="./styles/home.css">
-    <link rel="stylesheet" href="./styles/products.css">
-    <link rel="stylesheet" href="./styles/goals.css">
-    <link rel="stylesheet" href="./styles/about.css">
-    <link rel="stylesheet" href="./styles/team.css">
-    <link rel="stylesheet" href="./styles/contact.css">
-    <link rel="stylesheet" href="./styles/loading.css">
-    <link rel="stylesheet" href="./styles/standard-assets/button.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/products.css">
+    <link rel="stylesheet" href="styles/goals.css">
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="styles/team.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/loading.css">
+    <link rel="stylesheet" href="styles/standard-assets/button.css">
 
-    <script src="./scripts/script.js" defer></script>
-
+    <script src="scripts/getProduct.js" defer></script>
+    <script src="scripts/script.js" defer></script>
 </head>
 
 <body>
@@ -75,7 +75,7 @@
     <header id="header" class="header">
         <div id="headerBackground" class="header-background"></div>
 
-        <img class="header-logo" src="./images/recytech-logo.svg" alt="RecyTech logo"
+        <img class="header-logo" src="images/recytech-logo.svg" alt="RecyTech logo"
             onclick="window.location.reload()">
 
         <h1 id="headerTitle" class="header-title">RecyTech</h1>
@@ -83,12 +83,12 @@
         <div class="header-separator"></div>
 
         <nav id="headerLinks" class="header-links">
-            <a href="#home" id="headerLink" class="header-link">Accueil</a>
-            <a href="#products" id="headerLink" class="header-link">Produits</a>
-            <a href="#goals" id="headerLink" class="header-link">Nos objectifs</a>
-            <a href="#about" id="headerLink" class="header-link">À propos</a>
-            <a href="#team" id="headerLink" class="header-link">Équipe</a>
-            <a href="#contact" id="headerLink" class="header-link">Contact</a>
+            <a href="index.html#home" id="headerLink" class="header-link">Accueil</a>
+            <a href="index.html#products" id="headerLink" class="header-link">Produits</a>
+            <a href="index.html#goals" id="headerLink" class="header-link">Nos objectifs</a>
+            <a href="index.html#about" id="headerLink" class="header-link">À propos</a>
+            <a href="index.html#team" id="headerLink" class="header-link">Équipe</a>
+            <a href="index.html#contact" id="headerLink" class="header-link">Contact</a>
         </nav>
 
         <div class="hamburger-menu-container">
@@ -112,30 +112,30 @@
                 <span class="home-title-char">c</span>
                 <span class="home-title-char">h</span>
             </h1>
-            <button class="standard-button home-button" onclick="window.location.href('#products')"><p class="home-button-text">En savoir plus</p><img class="home-button-arrow" src="./images/down_arrow.svg" alt="downward arrow"></button>
-            <img class="home-forest-image" src="./images/forest.png" alt="">
+            <button class="standard-button home-button" onclick="window.location.href='#products'"><p class="home-button-text">En savoir plus</p><img class="home-button-arrow" src="images/down_arrow.svg" alt="downward arrow"></button>
+            <img class="home-forest-image" src="images/forest.png" alt="">
         </section>
 
         <secton id="products" class="main-section products">
             <div class="product">
                 <h1 class="product-title">Beamers</h1>
                 <h2 class="product-starting-price">À partir de 100 CHF</h2>
-                <button class="standard-button product-button">Découvrir</button>
+                <button class="standard-button product-button" onclick="window.location.href='https://shop.recytech.me';">Découvrir</button>
             </div>
             <div class="product">
                 <h1 class="product-title">Laptops</h1>
                 <h2 class="product-starting-price">À partir de 100 CHF</h2>
-                <button class="standard-button product-button">Découvrir</button>
+                <button class="standard-button product-button" onclick="window.location.href='https://shop.recytech.me';">Découvrir</button>
             </div>
             <div class="product">
                 <h1 class="product-title">Ordinateurs</h1>
                 <h2 class="product-starting-price">À partir de 100 CHF</h2>
-                <button class="standard-button product-button">Découvrir</button>
+                <button class="standard-button product-button" onclick="window.location.href='https://shop.recytech.me';">Découvrir</button>
             </div>
             <div class="product">
                 <h1 class="product-title">Périphériques</h1>
                 <h2 class="product-starting-price">À partir de 100 CHF</h2>
-                <button class="standard-button product-button">Découvrir</button>
+                <button class="standard-button product-button" onclick="window.location.href='https://shop.recytech.me';">Découvrir</button>
             </div>
         </secton>
 
@@ -225,14 +225,14 @@
                     d'un PC fiable à petit prix.</p>
                 </p>
             </div>
-            <img class="about-image" src="./images/recytech-logo.svg" alt="Reconditionnement d'ordinateurs">
+            <img class="about-image" src="images/recytech-logo.svg" alt="Reconditionnement d'ordinateurs">
         </section>
 
         <section id="team" class="main-section team">
             <div class="team-cards">
                 <div class="member-card">
                     <div class="member-top">
-                        <img src="./images/members/aster.png" alt="Photo de Achille Roussel" class="member-photo">
+                        <img src="images/members/aster.png" alt="Photo de Achille Roussel" class="member-photo">
                         <h3 class="member-name">Achille Roussel</h3>
                     </div>
                     <p class="member-description">"Ce n'est qu'en perdant la liberté qu'on en saisit la pleine valeur"
@@ -240,7 +240,7 @@
                 </div>
                 <div class="member-card first">
                     <div class="member-top">
-                        <img src="./images/members/dimitri.png" alt="Photo de Dimitri Blanchard" class="member-photo">
+                        <img src="images/members/dimitri.png" alt="Photo de Dimitri Blanchard" class="member-photo">
                         <h3 class="member-name">Dimitri Blanchard</h3>
                     </div>
                     <p class="member-description">"Chaque ligne de code, un instant figé dans la fugacité de
@@ -248,21 +248,21 @@
                 </div>
                 <div class="member-card">
                     <div class="member-top">
-                        <img src="./images/members/isaia.jpeg" alt="Photo de Isaia Placi" class="member-photo">
+                        <img src="images/members/isaia.jpeg" alt="Photo de Isaia Placi" class="member-photo">
                         <h3 class="member-name">Isaia Placi</h3>
                     </div>
                     <p class="member-description">"Le code est le langage avec lequel nous écrivons l'avenir."</p>
                 </div>
                 <div class="member-card">
                     <div class="member-top">
-                        <img src="./images/members/jdm.png" alt="Photo de Julien de Montmollin" class="member-photo">
+                        <img src="images/members/jdm.png" alt="Photo de Julien de Montmollin" class="member-photo">
                         <h3 class="member-name">Julien de Montmollin</h3>
                     </div>
                     <p class="member-description">"Le meilleur moyen de prédire le futur, c'est de le créer."</p>
                 </div>
                 <div class="member-card">
                     <div class="member-top">
-                        <img src="./images/members/vital.png" alt="Photo de Vital Vuillaume" class="member-photo">
+                        <img src="images/members/vital.png" alt="Photo de Vital Vuillaume" class="member-photo">
                         <h3 class="member-name">Vital Vuillaume</h3>
                     </div>
                     <p class="member-description">"Le numérique est ma toile, le code est ma couleur."</p>
@@ -290,7 +290,7 @@
                             <img class="footer-icon" src="images/github.svg" alt="github logo">
                             GitHub
                         </a>
-                        <a href="./documents/" class="footer-link" target="_blank">
+                        <a href="documents/index.html" class="footer-link" target="_blank">
                             <img class="footer-icon" src="images/archives.svg" alt="file icon">
                             Documents
                         </a>
