@@ -10,14 +10,14 @@ async function getProducts() {
     
         const products = await fetchProducts();
         const inStock = products.filter((p) => p.stock_status === "instock");
-        const sorted = inStock.sort((a, b) => new Date(b.date_created) - new Date(a.date_created));
+        const sorted = inStock.sort((a, b) => Math.random() - 0.5);
         const selected = sorted.slice(0, maxProducts);
 
         const productsHtml = selected.map((p) => getProductCardHtml(
             p.images.length ? p.images[0].src : null,
             p.name,
             p.short_description,
-            p.price,
+            p.price,    
             p.permalink
         )).join("");
 
