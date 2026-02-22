@@ -9,7 +9,8 @@ const maxProducts = 4;
 async function getProducts() {
     
         const products = await fetchProducts();
-        const inStock = products.filter((p) => p.stock_status === "instock");
+        const inStock = products.filter((p) => p.stock_status === "instock").filter((p) => p.status === "publish");
+
         const sorted = inStock.sort((a, b) => Math.random() - 0.5);
         const selected = sorted.slice(0, maxProducts);
 
