@@ -356,6 +356,13 @@ url('../images/illustrations/hero-workshop.jpg');
     background-repeat: no-repeat;
 }
 
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 .product-img.has-image .icon {
     opacity: 0;
 }
