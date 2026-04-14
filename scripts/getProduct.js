@@ -1,4 +1,4 @@
-const shopBaseUrl = "https://v2.shop.recytech.me";
+const shopBaseUrl = "https://shop.recytech.me";
 const apiUrl = `${shopBaseUrl}/api/products`;
 
 const productsGrid = document.getElementById("productsGrid");
