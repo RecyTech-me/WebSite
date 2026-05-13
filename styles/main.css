@@ -490,6 +490,26 @@ url('../images/illustrations/hero-workshop.jpg');
     font-size: 14px;
 }
 
+.team-social {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.linkedin-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #0077b5;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.linkedin-btn:hover {
+    color: #005a87;
+}
+
 /* Partners Section */
 .partners {
     padding: 60px 0;
