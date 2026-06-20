@@ -269,6 +269,18 @@ url('../images/illustrations/hero-workshop.jpg');
     border: 2px solid #3f6b52;
 }
 
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #3f6b52;
+}
+
 
 /* Mission Section */
 .mission {
@@ -326,6 +338,42 @@ url('../images/illustrations/hero-workshop.jpg');
 .products {
     padding: 60px 0;
     background-color: #f8f5f0;
+}
+
+.paths {
+    padding: 70px 0;
+    background-color: #efe7d8;
+}
+
+.paths-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 26px;
+    margin-top: 34px;
+}
+
+.path-card {
+    display: grid;
+    gap: 16px;
+    align-content: start;
+    padding: 30px;
+    border-radius: 18px;
+    background-color: #f8f5f0;
+    box-shadow: 0 10px 28px rgba(63, 107, 82, 0.12);
+}
+
+.path-card .icon {
+    width: 42px;
+    height: 42px;
+}
+
+.path-card h3,
+.path-card p {
+    margin: 0;
+}
+
+.path-card .btn {
+    justify-self: start;
 }
 
 .products-grid {
@@ -639,6 +687,7 @@ footer {
     .header-links.expanded .header-link:nth-child(3) { transition-delay: 100ms; }
     .header-links.expanded .header-link:nth-child(4) { transition-delay: 150ms; }
     .header-links.expanded .header-link:nth-child(5) { transition-delay: 200ms; }
+    .header-links.expanded .header-link:nth-child(6) { transition-delay: 250ms; }
     
     .hero h2 {
         font-size: 32px;
