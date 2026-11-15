@@ -5,20 +5,30 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+
+concurrency:
+  group: website-production
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
     - name: Check document publication boundary
       run: python3 -m unittest discover -s tests
 
     - name: FTP Deployment
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      uses: SamKirkland/FTP-Deploy-Action@110f9186c050f71550953127052e77650219c287 # v4.4.0
       with:
+        protocol: ftps
+        security: strict
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
@@ -31,3 +41,5 @@ jobs:
           **/node_modules/**
           tests/**
           README.md
+          docs/**
+          package*.json
