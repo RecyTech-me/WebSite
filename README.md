@@ -24,3 +24,19 @@ request. Already published Git history, external caches, and previous downloads
 remain outside this website access control.
 
 Run the publication checks with `python3 -m unittest discover -s tests`.
+
+## Security maintenance
+
+Deployment requires strict FTPS certificate verification. If the hosting account
+cannot provide a trusted FTPS certificate, fix its configuration; do not switch
+back to plain FTP or disable certificate verification.
+
+Security HTTP headers and private-file rules are in `.htaccess`. Front proxies
+must enforce equivalent rules if they serve static files without Apache.
+The browser regression tests run with `npm ci`,
+`npx playwright install chromium`, and `npm test`.
+
+See `docs/security-audit-2026-11-15.md` for scope, findings and remaining operator
+items. Historical WooCommerce credentials are known and must be revoked if still
+active. Gitleaks includes a custom rule and exempts only the two immutable old
+commits identified during the audit; new commits are always scanned.

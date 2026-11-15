@@ -40,9 +40,20 @@ async function fetchProducts() {
 }
 
 function stripHtml(value) {
-    const temp = document.createElement("div");
+    const temp = document.createElement("template");
     temp.innerHTML = String(value || "");
-    return (temp.textContent || temp.innerText || "").trim();
+    return (temp.content.textContent || "").trim();
+}
+
+function safeProductUrl(value, { shopOnly = false } = {}) {
+    try {
+        const url = new URL(String(value || ""), `${shopBaseUrl}/`);
+        if (url.protocol !== "https:" || url.username || url.password) return "";
+        if (shopOnly && url.origin !== shopBaseUrl) return "";
+        return url.href;
+    } catch {
+        return "";
+    }
 }
 
 function escapeHtml(value) {
@@ -57,10 +68,11 @@ function escapeHtml(value) {
 function getProductCardHtml(imageUrl, name, description, price, link) {
     const safeName = escapeHtml(name);
     const safeDescription = escapeHtml(stripHtml(description));
-    const safeLink = escapeHtml(link || `${shopBaseUrl}/`);
+    const safeLink = escapeHtml(safeProductUrl(link, { shopOnly: true }) || `${shopBaseUrl}/`);
     const safePrice = price ? `À partir de ${escapeHtml(price)} CHF` : "Prix sur demande";
-    const safeImage = imageUrl
-        ? `<img src="${escapeHtml(imageUrl)}" alt="${safeName}" loading="lazy" referrerpolicy="no-referrer">`
+    const image = safeProductUrl(imageUrl);
+    const safeImage = image
+        ? `<img src="${escapeHtml(image)}" alt="${safeName}" loading="lazy" referrerpolicy="no-referrer">`
         : "";
 
     return `
