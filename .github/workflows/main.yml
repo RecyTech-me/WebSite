@@ -13,6 +13,9 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
+    - name: Check document publication boundary
+      run: python3 -m unittest discover -s tests
+
     - name: FTP Deployment
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
@@ -22,3 +25,9 @@ jobs:
         server-dir: "/"
         local-dir: ./
         dry-run: false
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          tests/**
+          README.md
