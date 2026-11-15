@@ -24,12 +24,31 @@ jobs:
     - name: Check document publication boundary
       run: python3 -m unittest discover -s tests
 
+    - name: Verify FTPS hostname matches the existing deployment endpoint
+      env:
+        FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        FTP_TLS_HOST: plesk.librahost.fr
+      run: |
+        node <<'JS'
+        const dns = require('node:dns').promises;
+        (async () => {
+          const [existing, tls] = await Promise.all([
+            dns.lookup(process.env.FTP_SERVER, { all: true }),
+            dns.lookup(process.env.FTP_TLS_HOST, { all: true }),
+          ]);
+          if (!existing.some(a => tls.some(b => a.address === b.address))) {
+            throw new Error('The trusted FTPS hostname does not match the configured deployment endpoint');
+          }
+          console.log('FTPS endpoint verified; certificate verification remains mandatory');
+        })().catch(() => { console.error('FTPS endpoint verification failed'); process.exitCode = 1; });
+        JS
+
     - name: FTP Deployment
       uses: SamKirkland/FTP-Deploy-Action@110f9186c050f71550953127052e77650219c287 # v4.4.0
       with:
         protocol: ftps
         security: strict
-        server: ${{ secrets.FTP_SERVER }}
+        server: plesk.librahost.fr
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         server-dir: "/"
