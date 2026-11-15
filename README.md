@@ -40,3 +40,6 @@ See `docs/security-audit-2026-11-15.md` for scope, findings and remaining operat
 items. Historical WooCommerce credentials are known and must be revoked if still
 active. Gitleaks includes a custom rule and exempts only the two immutable old
 commits identified during the audit; new commits are always scanned.
+
+The FTP service certificate identifies `plesk.librahost.fr`; deployment uses that
+hostname only after verifying it resolves to the configured FTP_SERVER endpoint.
