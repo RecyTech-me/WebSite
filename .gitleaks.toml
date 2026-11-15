@@ -1,0 +1,12 @@
+[extend]
+useDefault = true
+
+[[rules]]
+id = "woocommerce-consumer-credential"
+description = "WooCommerce consumer key or secret (including retired integrations)"
+regex = '''(?:ck|cs)_[a-fA-F0-9]{40}'''
+keywords = ["ck_", "cs_"]
+
+[rules.allowlist]
+description = "Known historical WooCommerce credentials; revoke separately. Only these immutable commits are exempt."
+commits = ["98168c49e48e0585533a332e7cef3458c594f7b7", "ca5c665445ba78ea0da6573821a226f44ac5cb3e"]

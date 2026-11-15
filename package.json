@@ -1,0 +1,6 @@
+{
+  "name": "recytech-website",
+  "private": true,
+  "scripts": { "test": "node --test tests/*.test.js" },
+  "devDependencies": { "playwright": "^1.65.1" }
+}
