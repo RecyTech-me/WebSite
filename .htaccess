@@ -1,0 +1,4 @@
+# Preserve old bookmarks while enforcing authentication on the shop server.
+# The PDFs are removed from this static site; never upload private copies here.
+RedirectMatch 302 "^/documents/(committee|general-meeting)\.html$" "https://shop.recytech.me/association-documents/$1"
+RedirectMatch 302 "^/documents/(committee|general-meeting)/(.*)$" "https://shop.recytech.me/association-documents/$1/$2"
