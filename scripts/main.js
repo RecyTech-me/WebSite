@@ -1,3 +1,5 @@
+document.getElementById("headerLogo")?.addEventListener("click", () => window.location.reload());
+
 const body = document.body;
 const header = document.getElementById("header");
 const headerBackground = document.getElementById("headerBackground");

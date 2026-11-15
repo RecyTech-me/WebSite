@@ -1,4 +1,23 @@
-# Preserve old bookmarks while enforcing authentication on the shop server.
-# The PDFs are removed from this static site; never upload private copies here.
+Options -Indexes
+
+# Deployment metadata, VCS files, environment files and backup copies are private.
+# Keep /.well-known/ available for certificate validation.
+RedirectMatch 404 "(?i)(^|/)\.(?!well-known(?:/|$))"
+<FilesMatch "(?i)(~|\.(?:bak|old|orig|save|sql|sqlite|sqlite3|db|log|env|ini|sh))$">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "DENY"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+    Header always set Strict-Transport-Security "max-age=31536000"
+    Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data: https:; connect-src 'self' https://shop.recytech.me; upgrade-insecure-requests"
+    Header unset X-Powered-By
+    Header always unset X-Powered-By
+</IfModule>
+
+# PDFs have been removed from the static root. Old bookmarks go through shop auth.
 RedirectMatch 302 "^/documents/(committee|general-meeting)\.html$" "https://shop.recytech.me/association-documents/$1"
 RedirectMatch 302 "^/documents/(committee|general-meeting)/(.*)$" "https://shop.recytech.me/association-documents/$1/$2"
